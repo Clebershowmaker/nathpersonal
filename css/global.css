@@ -41,10 +41,23 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-heading);
   line-height: var(--line-height-tight);
   margin: 0;
   padding: 0;
+  position: relative;
+  padding-left: 16px;
+}
+
+h2::before, h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: var(--color-primary);
+  opacity: 0.6;
 }
 
 h1 {

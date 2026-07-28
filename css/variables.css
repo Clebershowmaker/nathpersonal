@@ -48,7 +48,8 @@
   /* Font Weights */
   --font-weight-regular: 400;
   --font-weight-medium: 500;
-  --font-weight-bold: 700;
+  --font-weight-bold: 600;
+  --font-weight-heading: 500;
 
   /* Line Heights */
   --line-height-tight: 1.2;
