@@ -699,3 +699,225 @@ footer {
     color-scheme: dark;
   }
 }
+
+/* =============================================================================
+   HERO SECTION
+   ============================================================================= */
+
+.hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 15, 15, 0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero-title {
+  font-size: var(--font-size-h1);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-md);
+  line-height: var(--line-height-tight);
+}
+
+.hero-subtitle {
+  font-size: var(--font-size-h2);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+}
+
+.hero-cta {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-cta .btn {
+  min-width: 200px;
+}
+
+/* =============================================================================
+   SERVICES SECTION
+   ============================================================================= */
+
+.services {
+  background-color: var(--color-bg-primary);
+  padding: var(--spacing-2xl) var(--spacing-md);
+}
+
+.section-title {
+  font-size: var(--font-size-h2);
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+  color: var(--color-text-primary);
+}
+
+.benefits-list {
+  list-style: none;
+  margin: var(--spacing-md) 0;
+  padding: 0;
+}
+
+.benefits-list li {
+  padding: var(--spacing-xs) 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-body);
+  position: relative;
+  padding-left: var(--spacing-lg);
+}
+
+.benefits-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+/* =============================================================================
+   TESTIMONIAL SECTION
+   ============================================================================= */
+
+.testimonial-highlight {
+  background-color: var(--color-bg-primary);
+  padding: var(--spacing-2xl) var(--spacing-md);
+}
+
+.testimonial-card {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+  transition: all var(--transition-base);
+}
+
+.testimonial-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.testimonial-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial-name {
+  font-size: var(--font-size-h3);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.testimonial-service {
+  font-size: var(--font-size-small);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.testimonial-stars {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.testimonial-text {
+  font-size: var(--font-size-body);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  font-style: italic;
+}
+
+/* =============================================================================
+   CTA FINAL SECTION
+   ============================================================================= */
+
+.cta-final {
+  background: linear-gradient(135deg, #FF3333 0%, #ff6b6b 100%);
+  padding: var(--spacing-2xl) var(--spacing-md);
+  text-align: center;
+  color: white;
+}
+
+.cta-headline {
+  font-size: var(--font-size-h2);
+  color: white;
+  margin-bottom: var(--spacing-sm);
+}
+
+.cta-subheadline {
+  font-size: var(--font-size-body);
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--spacing-lg);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+  min-width: 180px;
+}
+
+.cta-buttons .btn-secondary {
+  background-color: white;
+  color: #FF3333;
+  border-color: white;
+}
+
+.cta-buttons .btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+/* =============================================================================
+   NAVBAR SCROLLED STATE
+   ============================================================================= */
+
+.navbar.scrolled {
+  box-shadow: var(--shadow-md);
+  background-color: rgba(15, 15, 15, 0.95);
+}
+
+/* =============================================================================
+   LOGO IMAGE SIZING
+   ============================================================================= */
+
+.navbar-logo-img {
+  height: 80px;
+  width: auto;
+  display: block;
+}

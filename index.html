@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal Training especializado em idosos. Nathalia oferece treinamento funcional para sua saúde e bem-estar.">
+  <meta name="theme-color" content="#0f0f0f">
+
+  <title>Nath Personal - Personal Training para Idosos</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- =========================================================================
+       NAVBAR
+       ========================================================================= -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <!-- Logo -->
+      <a href="index.html" class="navbar-logo" aria-label="Nath Personal - Home">
+        <img src="assets/logo/Logo-nath-fundoescuro.png" alt="Nath Personal Logo" class="navbar-logo-img">
+      </a>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links" id="navbarMenu">
+        <li><a href="index.html" class="nav-link active">HOME</a></li>
+        <li><a href="sobre.html" class="nav-link">SOBRE</a></li>
+        <li><a href="servicos.html" class="nav-link">SERVIÇOS</a></li>
+        <li><a href="depoimentos.html" class="nav-link">DEPOIMENTOS</a></li>
+        <li><a href="contato.html" class="nav-link">CONTATO</a></li>
+      </ul>
+
+      <!-- CTA Button (WhatsApp) - Hidden on Mobile -->
+      <a href="https://api.whatsapp.com/send?l=pt_pt&phone=5531988991661" class="btn btn-primary btn-small" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">
+        WhatsApp
+      </a>
+
+      <!-- Hamburger Menu Toggle -->
+      <button class="menu-toggle" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       HERO SECTION
+       ========================================================================= -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="container">
+        <h1 class="hero-title observe-fade-in-up">
+          Transformando vidas através do movimento
+        </h1>
+        <p class="hero-subtitle observe-fade-in-up">
+          Especialista em Personal Training para Idosos
+        </p>
+        <div class="hero-cta observe-fade-in-up">
+          <a href="servicos.html" class="btn btn-primary btn-large">Conheça nossos serviços</a>
+          <a href="sobre.html" class="btn btn-secondary btn-large">Saiba mais sobre mim</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SERVICES SECTION
+       ========================================================================= -->
+  <section class="services" id="services">
+    <div class="container">
+      <h2 class="section-title observe-fade-in">Nossos Serviços</h2>
+
+      <div class="grid grid-3-desktop">
+        <!-- Personal Sênior (Destaque) -->
+        <div class="card card-highlight observe-scale-in">
+          <div class="card-header">
+            <h3>Personal Sênior</h3>
+            <p>Especialização em idosos</p>
+          </div>
+          <div class="card-body">
+            <p>Treinamento especializado para idosos. Foco em força, equilíbrio, mobilidade e independência.</p>
+            <ul class="benefits-list">
+              <li>Melhora na capacidade funcional</li>
+              <li>Prevenção de quedas</li>
+              <li>Maior independência</li>
+              <li>Qualidade do sono</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a href="servicos.html" class="btn btn-primary">Saiba mais</a>
+          </div>
+        </div>
+
+        <!-- Personal Trainer -->
+        <div class="card observe-scale-in">
+          <div class="card-header">
+            <h3>Personal Trainer</h3>
+            <p>Treinamento personalizado</p>
+          </div>
+          <div class="card-body">
+            <p>Treinamento personalizado para seus objetivos específicos.</p>
+            <ul class="benefits-list">
+              <li>Perda de peso</li>
+              <li>Ganho muscular</li>
+              <li>Condicionamento físico</li>
+              <li>Autoconfiança</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a href="servicos.html" class="btn btn-primary">Saiba mais</a>
+          </div>
+        </div>
+
+        <!-- Treinamento Funcional -->
+        <div class="card observe-scale-in">
+          <div class="card-header">
+            <h3>Treinamento Funcional</h3>
+            <p>Movimentos naturais</p>
+          </div>
+          <div class="card-body">
+            <p>Movimentos naturais e dinâmicos para máximo desempenho e qualidade de vida.</p>
+            <ul class="benefits-list">
+              <li>Prevenção de lesões</li>
+              <li>Força e agilidade</li>
+              <li>Melhor mobilidade</li>
+              <li>Estabilidade corporal</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a href="servicos.html" class="btn btn-primary">Saiba mais</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       TESTIMONIAL SECTION
+       ========================================================================= -->
+  <section class="testimonial-highlight" id="testimonial">
+    <div class="container">
+      <div class="testimonial-card observe-fade-in-up">
+        <div class="testimonial-avatar">
+          <img src="https://via.placeholder.com/120x120?text=Maria" alt="Maria, 68 anos" class="avatar-img">
+        </div>
+        <div class="testimonial-content">
+          <h3 class="testimonial-name">Maria, 68 anos</h3>
+          <p class="testimonial-service">Personal Sênior</p>
+          <div class="testimonial-stars">
+            ⭐⭐⭐⭐⭐
+          </div>
+          <p class="testimonial-text">
+            "Há 6 meses não conseguia subir escadas. Hoje caminho 5km sem cansaço! Nathalia mudou minha vida."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       CTA FINAL SECTION
+       ========================================================================= -->
+  <section class="cta-final" id="cta">
+    <div class="container">
+      <h2 class="cta-headline observe-fade-in">Vamos começar sua transformação?</h2>
+      <p class="cta-subheadline observe-fade-in">Entre em contato e agende sua avaliação gratuita</p>
+      <div class="cta-buttons observe-fade-in">
+        <a href="https://api.whatsapp.com/send?l=pt_pt&phone=5531988991661" class="btn btn-primary btn-large" target="_blank" rel="noopener noreferrer">
+          Abrir WhatsApp
+        </a>
+        <a href="contato.html" class="btn btn-secondary btn-large">
+          Enviar mensagem
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <!-- Menu Links -->
+        <div class="footer-section">
+          <h3>Menu</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="depoimentos.html">Depoimentos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+          <h3>Contato</h3>
+          <ul>
+            <li>
+              <a href="tel:+5531988991661">+55 31 98899-1661</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/nathpersonalbh" target="_blank" rel="noopener noreferrer">@nathpersonalbh</a>
+            </li>
+            <li>
+              <a href="https://api.whatsapp.com/send?l=pt_pt&phone=5531988991661" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Hours -->
+        <div class="footer-section">
+          <h3>Horário</h3>
+          <ul>
+            <li>
+              <strong>Seg-Sex:</strong><br>
+              08:00 - 18:00
+            </li>
+            <li>
+              <strong>Sab:</strong><br>
+              08:00 - 12:00
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          Todos os direitos reservados © Nath Personal. Site desenvolvido por <strong>Showmaker Digital</strong>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
