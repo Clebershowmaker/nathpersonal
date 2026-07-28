@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça nossos serviços de Personal Training para Idosos, Personal Trainer e Treinamento Funcional. Soluções personalizadas para sua saúde.">
+  <meta name="theme-color" content="#0f0f0f">
+
+  <title>Serviços - Nath Personal</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Inline Styles for SERVIÇOS specific sections -->
+  <style>
+    /* =========================================================================
+       DETAILED DESCRIPTION SECTION (TABS)
+       ========================================================================= */
+    .servicos-detalhes {
+      padding: var(--spacing-large);
+      background-color: var(--bg-secondary);
+    }
+
+    .tabs-container {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-large);
+    }
+
+    .tabs-buttons {
+      display: flex;
+      gap: var(--spacing-medium);
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: var(--spacing-medium);
+    }
+
+    .tab-btn {
+      padding: var(--spacing-small) var(--spacing-medium);
+      border: none;
+      background-color: transparent;
+      color: var(--text-secondary);
+      font-size: var(--font-size-body);
+      font-weight: var(--font-weight-medium);
+      cursor: pointer;
+      transition: all var(--transition-base);
+      border-bottom: 3px solid transparent;
+      position: relative;
+      bottom: -1px;
+    }
+
+    .tab-btn.btn-primary {
+      background-color: transparent;
+      color: var(--color-primary);
+      border-bottom: 3px solid var(--color-primary);
+    }
+
+    .tab-btn:hover {
+      color: var(--color-primary);
+    }
+
+    .tab-content {
+      display: none;
+      animation: observe-fade-in-up 0.6s ease-out;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .tab-content .card {
+      background-color: var(--bg-primary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius-base);
+      padding: var(--spacing-large);
+    }
+
+    .tab-content .card h3 {
+      font-size: var(--font-size-h3-desktop);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--spacing-medium);
+      margin-top: var(--spacing-large);
+    }
+
+    .tab-content .card h3:first-child {
+      margin-top: 0;
+    }
+
+    .tab-content .card p {
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: var(--spacing-medium);
+    }
+
+    .tab-content .card ol,
+    .tab-content .card ul {
+      margin-left: var(--spacing-large);
+      margin-bottom: var(--spacing-medium);
+    }
+
+    .tab-content .card ol li,
+    .tab-content .card ul li {
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: var(--spacing-small);
+    }
+
+    /* =========================================================================
+       RESPONSIVE ADJUSTMENTS
+       ========================================================================= */
+    @media (max-width: 767px) {
+      .servicos-detalhes {
+        padding: var(--spacing-medium);
+      }
+
+      .tabs-buttons {
+        flex-direction: column;
+        gap: var(--spacing-small);
+        padding-bottom: var(--spacing-small);
+      }
+
+      .tab-btn {
+        padding: var(--spacing-small);
+        text-align: left;
+      }
+
+      .tab-content .card {
+        padding: var(--spacing-medium);
+      }
+
+      .tab-content .card h3 {
+        font-size: var(--font-size-h3-mobile);
+        margin-top: var(--spacing-medium);
+      }
+
+      .tab-content .card p {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- =========================================================================
+       NAVBAR
+       ========================================================================= -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <!-- Logo -->
+      <a href="index.html" class="navbar-logo" aria-label="Nath Personal - Home">
+        <img src="assets/logo/Logo-nath-fundoescuro.png" alt="Nath Personal Logo" class="navbar-logo-img">
+      </a>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links" id="navbarMenu">
+        <li><a href="index.html" class="nav-link">HOME</a></li>
+        <li><a href="sobre.html" class="nav-link">SOBRE</a></li>
+        <li><a href="servicos.html" class="nav-link active">SERVIÇOS</a></li>
+        <li><a href="depoimentos.html" class="nav-link">DEPOIMENTOS</a></li>
+        <li><a href="contato.html" class="nav-link">CONTATO</a></li>
+      </ul>
+
+      <!-- CTA Button (WhatsApp) - Hidden on Mobile -->
+      <a href="https://api.whatsapp.com/send?l=pt_pt&phone=5531988991661" class="btn btn-primary btn-small" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">
+        WhatsApp
+      </a>
+
+      <!-- Hamburger Menu Toggle -->
+      <button class="menu-toggle" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       HERO SECTION
+       ========================================================================= -->
+  <section class="hero" id="hero" style="height: 40vh; min-height: 300px;">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="container">
+        <h1 class="hero-title observe-fade-in-up">
+          Nossos Serviços
+        </h1>
+        <p class="hero-subtitle observe-fade-in-up">
+          Soluções personalizadas para sua saúde
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SERVICE CARDS SECTION
+       ========================================================================= -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="grid grid-3-desktop">
+        <!-- Personal Sênior (Destaque) -->
+        <div class="card card-highlight observe-scale-in">
+          <div class="card-header">
+            <h3>👴 Personal Sênior</h3>
+            <p>Especialização em idosos</p>
+          </div>
+          <div class="card-body">
+            <p>Treinamento especializado para idosos. Foco em força, equilíbrio, mobilidade e independência.</p>
+            <ul class="benefits-list">
+              <li>Melhora na capacidade funcional</li>
+              <li>Prevenção de quedas</li>
+              <li>Maior independência</li>
+              <li>Qualidade do sono</li>
+              <li>Aumento de energia</li>
+              <li>Melhor qualidade de vida</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a href="#senior" class="btn btn-primary">Agendar agora</a>
+          </div>
+        </div>
+
+        <!-- Personal Trainer -->
+        <div class="card observe-scale-in">
+          <div class="card-header">
+            <h3>💪 Personal Trainer</h3>
+            <p>Treinamento personalizado</p>
+          </div>
+          <div class="card-body">
+            <p>Treinamento personalizado para seus objetivos específicos.</p>
+            <ul class="benefits-list">
+              <li>Perda de peso</li>
+              <li>Ganho muscular</li>
+              <li>Condicionamento físico</li>
+              <li>Autoconfiança</li>
+              <li>Resistência aprimorada</li>
+              <li>Transformação corporal</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a href="#trainer" class="btn btn-primary">Agendar agora</a>
+          </div>
+        </div>
+
+        <!-- Treinamento Funcional -->
+        <div class="card observe-scale-in">
+          <div class="card-header">
+            <h3>🏃 Treinamento Funcional</h3>
+            <p>Movimentos naturais</p>
+          </div>
+          <div class="card-body">
+            <p>Movimentos naturais e dinâmicos para máximo desempenho e qualidade de vida.</p>
+            <ul class="benefits-list">
+              <li>Prevenção de lesões</li>
+              <li>Força e agilidade</li>
+              <li>Melhor mobilidade</li>
+              <li>Estabilidade corporal</li>
+              <li>Flexibilidade aumentada</li>
+              <li>Desempenho funcional</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a href="#funcional" class="btn btn-primary">Agendar agora</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       DETAILED DESCRIPTION SECTION (TABS)
+       ========================================================================= -->
+  <section class="servicos-detalhes" id="detalhes">
+    <div class="container">
+      <div class="tabs-container">
+        <!-- Tab Buttons -->
+        <div class="tabs-buttons">
+          <button class="tab-btn btn-primary" data-tab="senior">Personal Sênior</button>
+          <button class="tab-btn" data-tab="trainer">Personal Trainer</button>
+          <button class="tab-btn" data-tab="funcional">Treinamento Funcional</button>
+        </div>
+
+        <!-- Tab Content - Personal Sênior -->
+        <div id="senior" class="tab-content active">
+          <div class="card observe-fade-in-up">
+            <h3>Descrição</h3>
+            <p>
+              O Personal Sênior é um programa de treinamento individualizado especialmente desenvolvido para atender às necessidades específicas de idosos. Com foco na segurança, conforto e efetividade, oferecemos uma abordagem humanizada que respeita as limitações de cada cliente e promove a máxima qualidade de vida.
+            </p>
+
+            <h3>Público-Alvo</h3>
+            <p>
+              Pessoas a partir de 60 anos que buscam melhorar sua funcionalidade, independência e qualidade de vida. Ideal para idosos sedentários, com limitações de mobilidade ou que já praticam alguma atividade e desejam evolução segura.
+            </p>
+
+            <h3>Como Funciona</h3>
+            <ol>
+              <li><strong>Avaliação Inicial:</strong> Análise completa de saúde, mobilidade, força e limitações específicas</li>
+              <li><strong>Planejamento Personalizado:</strong> Desenvolvimento de programa de treinamento adaptado aos seus objetivos</li>
+              <li><strong>Atendimento Domiciliar ou Presencial:</strong> Sessões de 50-60 minutos em local de sua preferência</li>
+              <li><strong>Monitoramento Contínuo:</strong> Acompanhamento constante com ajustes conforme sua evolução</li>
+              <li><strong>Reavaliação Periódica:</strong> Avaliações a cada 4-6 semanas para garantir progresso</li>
+            </ol>
+
+            <h3>Benefícios</h3>
+            <ul>
+              <li>Melhora significativa na capacidade funcional e força muscular</li>
+              <li>Prevenção de quedas e aumento de equilíbrio</li>
+              <li>Maior independência nas atividades do dia a dia</li>
+              <li>Melhora na qualidade do sono e bem-estar geral</li>
+              <li>Aumento de energia e disposição</li>
+              <li>Alívio de dores e desconfortos</li>
+              <li>Estímulo cognitivo e prevenção de declínio mental</li>
+              <li>Socialização e acompanhamento dedicado</li>
+            </ul>
+
+            <h3>Frequência Recomendada</h3>
+            <p>
+              2 a 3 vezes por semana, com sessões de 50-60 minutos. Essa frequência garante resultados consistentes e segurança no processo de adaptação do corpo.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tab Content - Personal Trainer -->
+        <div id="trainer" class="tab-content">
+          <div class="card observe-fade-in-up">
+            <h3>Descrição</h3>
+            <p>
+              O serviço de Personal Trainer oferece treinamento personalizado e orientado por profissional experiente. Desenvolvemos programas específicos para seus objetivos, seja perda de peso, ganho muscular, melhora de performance ou condicionamento geral. Cada sessão é planejada e ajustada conforme sua evolução.
+            </p>
+
+            <h3>Público-Alvo</h3>
+            <p>
+              Adultos de todas as idades que buscam treinar com segurança e efetividade. Ideal para pessoas com objetivos específicos, que desejam otimizar seus resultados e manter a motivação constante com acompanhamento profissional.
+            </p>
+
+            <h3>Como Funciona</h3>
+            <ol>
+              <li><strong>Consulta Inicial:</strong> Discussão de seus objetivos, histórico de saúde e experiência com exercícios</li>
+              <li><strong>Avaliação Física:</strong> Testes de força, resistência e composição corporal para baseline</li>
+              <li><strong>Prescrição do Programa:</strong> Criação de plano de treino personalizado com exercícios específicos</li>
+              <li><strong>Acompanhamento em Sessões:</strong> Treinamento orientado, correção de movimento e motivação</li>
+              <li><strong>Revisão e Ajustes:</strong> Reavaliações regulares com adaptação do programa conforme progresso</li>
+            </ol>
+
+            <h3>Benefícios</h3>
+            <ul>
+              <li>Perda de peso eficaz e sustentável</li>
+              <li>Ganho de massa muscular e definição corporal</li>
+              <li>Melhora do condicionamento cardiovascular</li>
+              <li>Aumento de autoconfiança e autoestima</li>
+              <li>Prevenção de lesões com técnica adequada</li>
+              <li>Otimização de tempo com treinos eficientes</li>
+              <li>Motivação constante e accountability</li>
+              <li>Resultados visíveis em curto e longo prazo</li>
+            </ul>
+
+            <h3>Frequência Recomendada</h3>
+            <p>
+              3 a 4 vezes por semana para melhores resultados. Sessões de 50-60 minutos com intensidade progressiva conforme seu condicionamento. Complementar com exercícios em casa em dias sem personal.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tab Content - Treinamento Funcional -->
+        <div id="funcional" class="tab-content">
+          <div class="card observe-fade-in-up">
+            <h3>Descrição</h3>
+            <p>
+              O Treinamento Funcional trabalha com movimentos que replicas as atividades do dia a dia, utilizando o peso corporal e equipamentos diversos. Foca em desenvolver força, resistência, flexibilidade e coordenação de forma integrada, promovendo máximo desempenho e qualidade de vida.
+            </p>
+
+            <h3>Público-Alvo</h3>
+            <p>
+              Pessoas de todas as idades que buscam treinar de forma dinâmica e prática. Ideal para quem deseja sair da monotonia da academia tradicional, melhorar funcionalidade geral ou treinar movimentos que façam diferença no dia a dia.
+            </p>
+
+            <h3>Como Funciona</h3>
+            <ol>
+              <li><strong>Avaliação Funcional:</strong> Análise de movimentos básicos e capacidades físicas em funcionamento</li>
+              <li><strong>Desenho do Programa:</strong> Planejamento de treinos com movimentos variados e desafiadores</li>
+              <li><strong>Sessões Dinâmicas:</strong> Aulas com circuitos, exercícios variados e progressão constante</li>
+              <li><strong>Adaptação Progressiva:</strong> Aumento de dificuldade, velocidade e complexidade dos movimentos</li>
+              <li><strong>Monitoramento de Resultados:</strong> Avaliações regulares de melhora em força, resistência e coordenação</li>
+            </ol>
+
+            <h3>Benefícios</h3>
+            <ul>
+              <li>Prevenção eficaz de lesões com fortalecimento completo</li>
+              <li>Ganho de força e agilidade de forma integrada</li>
+              <li>Melhora significativa de mobilidade e flexibilidade</li>
+              <li>Estabilidade corporal e melhor postura</li>
+              <li>Aumento de resistência cardiovascular</li>
+              <li>Melhor coordenação motora e equilíbrio</li>
+              <li>Treinos dinâmicos e motivadores</li>
+              <li>Desempenho funcional aprimorado para atividades do dia a dia</li>
+            </ul>
+
+            <h3>Frequência Recomendada</h3>
+            <p>
+              2 a 3 vezes por semana, com sessões de 50-60 minutos. Permite recuperação adequada entre treinos mantendo consistência nos resultados. Complementar com atividades de alongamento e mobilidade nos dias de descanso.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       CTA FINAL SECTION
+       ========================================================================= -->
+  <section class="cta-final" id="cta">
+    <div class="container">
+      <h2 class="cta-headline observe-fade-in">Escolha seu serviço e vamos começar</h2>
+      <p class="cta-subheadline observe-fade-in">Entre em contato e agende sua avaliação gratuita</p>
+      <div class="cta-buttons observe-fade-in">
+        <a href="https://api.whatsapp.com/send?l=pt_pt&phone=5531988991661" class="btn btn-primary btn-large" target="_blank" rel="noopener noreferrer">
+          Abrir WhatsApp
+        </a>
+        <a href="contato.html" class="btn btn-secondary btn-large">
+          Enviar mensagem
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <!-- Menu Links -->
+        <div class="footer-section">
+          <h3>Menu</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="depoimentos.html">Depoimentos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+          <h3>Contato</h3>
+          <ul>
+            <li>
+              <a href="tel:+5531988991661">+55 31 98899-1661</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/nathpersonalbh" target="_blank" rel="noopener noreferrer">@nathpersonalbh</a>
+            </li>
+            <li>
+              <a href="https://api.whatsapp.com/send?l=pt_pt&phone=5531988991661" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Hours -->
+        <div class="footer-section">
+          <h3>Horário</h3>
+          <ul>
+            <li>
+              <strong>Seg-Sex:</strong><br>
+              08:00 - 18:00
+            </li>
+            <li>
+              <strong>Sab:</strong><br>
+              08:00 - 12:00
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          Todos os direitos reservados © Nath Personal. Site desenvolvido por <strong>Showmaker Digital</strong>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Tab Toggle Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get all tab buttons
+      const tabButtons = document.querySelectorAll('.tab-btn');
+
+      // Add click event listener to each tab button
+      tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          // Get the data-tab value
+          const tabName = this.getAttribute('data-tab');
+
+          // Hide all tab content
+          const tabContents = document.querySelectorAll('.tab-content');
+          tabContents.forEach(content => {
+            content.classList.remove('active');
+            content.style.display = 'none';
+          });
+
+          // Show the clicked tab content
+          const activeTab = document.getElementById(tabName);
+          if (activeTab) {
+            activeTab.classList.add('active');
+            activeTab.style.display = 'block';
+          }
+
+          // Remove btn-primary class from all buttons
+          tabButtons.forEach(btn => {
+            btn.classList.remove('btn-primary');
+          });
+
+          // Add btn-primary class to clicked button
+          this.classList.add('btn-primary');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
