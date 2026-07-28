@@ -8,19 +8,22 @@
      ========================================================================= */
 
   /* Primary Colors */
-  --color-primary: #D4AF37;           /* Dourado elegante */
+  --color-primary: #D4AF37;           /* Dourado premium */
   --color-primary-hover: #E5C158;     /* Dourado hover (claro) */
 
   /* Background Colors */
-  --color-bg-primary: #0f0f0f;        /* Fundo quase preto */
+  --color-bg-primary: #0f0f0f;        /* Dark base (#0f0f0f) */
   --color-bg-secondary: #1a1a1a;      /* Fundo cinza muito escuro */
+  --color-bg-warm: #F5F1ED;           /* Warm neutral para overlays/light sections */
 
   /* Text Colors */
   --color-text-primary: #e0e0e0;      /* Texto cinza claro */
   --color-text-secondary: #999999;    /* Texto cinza médio */
+  --color-text-on-warm: #2a2a2a;      /* Dark text on warm background */
 
   /* Border & Divider Colors */
   --color-border: #333333;            /* Bordas cinza escuro */
+  --color-border-warm: #E8E3DD;       /* Subtle border on warm bg */
 
   /* Status Colors */
   --color-success: #4CAF50;           /* Verde sucesso */
@@ -30,8 +33,8 @@
      ========================================================================= */
 
   /* Font Families */
-  --font-heading: "Poppins", "Inter", sans-serif;
-  --font-body: "Roboto", "Open Sans", sans-serif;
+  --font-heading: "Fraunces", Georgia, serif;     /* Premium display face */
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;  /* Modern, readable */
 
   /* Font Sizes - Desktop */
   --font-size-h1: 48px;

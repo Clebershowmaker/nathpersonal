@@ -18,7 +18,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- =========================================================================
@@ -55,22 +55,72 @@
   </nav>
 
   <!-- =========================================================================
-       HERO SECTION
+       HERO SECTION - Full-bleed with background imagery
        ========================================================================= -->
-  <section class="hero" id="home">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
+  <section class="hero" id="home" style="background: linear-gradient(135deg, rgba(15,15,15,0.65) 0%, rgba(15,15,15,0.45) 100%), url('assets/images/hero-personal-training.jpg') center/cover no-repeat; min-height: 100vh; display: flex; align-items: center; justify-content: center;">
+    <div class="hero-content" style="text-align: center; z-index: 10;">
       <div class="container">
-        <h1 class="hero-title observe-fade-in-up">
-          Transformando vidas através do movimento
+        <h1 class="hero-title observe-fade-in-up" style="font-size: 64px; font-family: var(--font-heading); font-weight: 700; line-height: 1.1; margin-bottom: 16px; letter-spacing: -0.02em;">
+          Transformando vidas<br>através do movimento
         </h1>
-        <p class="hero-subtitle observe-fade-in-up">
-          Especialista em Personal Training para Idosos
+        <p class="hero-subtitle observe-fade-in-up" style="font-size: 22px; font-weight: 400; color: var(--color-text-primary); margin-bottom: 48px; max-width: 600px; margin-left: auto; margin-right: auto;">
+          20+ anos de expertise em Personal Training especializado para idosos
         </p>
-        <div class="hero-cta observe-fade-in-up">
-          <a href="servicos.html" class="btn btn-primary btn-large">Conheça nossos serviços</a>
-          <a href="sobre.html" class="btn btn-secondary btn-large">Saiba mais sobre mim</a>
+        <div class="hero-cta observe-fade-in-up" style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <a href="https://api.whatsapp.com/send?l=pt_pt&phone=5531988991661" class="btn btn-primary btn-large" target="_blank" rel="noopener noreferrer">Iniciar no WhatsApp</a>
+          <a href="sobre.html" class="btn btn-secondary btn-large">Conheça minha história</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FEATURED SPECIALTY: PERSONAL SÊNIOR
+       ========================================================================= -->
+  <section class="featured-specialty" id="specialty" style="background: linear-gradient(to right, var(--color-bg-primary) 0%, var(--color-bg-primary) 50%, var(--color-bg-secondary) 50%, var(--color-bg-secondary) 100%); padding: 80px 0; position: relative;">
+    <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
+      <!-- Image -->
+      <div class="specialty-image" style="aspect-ratio: 1; background: url('assets/images/personal-senior-training.jpg') center/cover no-repeat; border-radius: 12px; box-shadow: 0 16px 48px rgba(0,0,0,0.5);"></div>
+
+      <!-- Content -->
+      <div class="specialty-content">
+        <p style="font-size: 14px; font-weight: 600; color: var(--color-primary); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 16px;">MINHA ESPECIALIDADE</p>
+        <h2 style="font-family: var(--font-heading); font-size: 48px; font-weight: 700; line-height: 1.1; margin-bottom: 24px; color: white;">Personal Training para Idosos</h2>
+        <p style="font-size: 18px; line-height: 1.6; color: var(--color-text-primary); margin-bottom: 32px;">
+          Encontrei meu verdadeiro propósito no trabalho com o público idoso. Com mais de 20 anos de experiência e especialização em Fisiologia do Exercício, desenvolvo programas personalizados que respeitam as necessidades únicas de cada cliente.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 40px;">
+          <div>
+            <p style="font-size: 28px; font-weight: 700; color: var(--color-primary); margin-bottom: 8px;">20+</p>
+            <p style="font-size: 14px; color: var(--color-text-secondary);">Anos de experiência</p>
+          </div>
+          <div>
+            <p style="font-size: 28px; font-weight: 700; color: var(--color-primary); margin-bottom: 8px;">500+</p>
+            <p style="font-size: 14px; color: var(--color-text-secondary);">Vidas transformadas</p>
+          </div>
+        </div>
+
+        <ul style="list-style: none; padding: 0; margin-bottom: 40px;">
+          <li style="display: flex; gap: 12px; margin-bottom: 16px; font-size: 16px; color: var(--color-text-primary);">
+            <span style="color: var(--color-primary); font-weight: 700;">✓</span>
+            Prevenção de quedas e lesões
+          </li>
+          <li style="display: flex; gap: 12px; margin-bottom: 16px; font-size: 16px; color: var(--color-text-primary);">
+            <span style="color: var(--color-primary); font-weight: 700;">✓</span>
+            Melhora de mobilidade e equilíbrio
+          </li>
+          <li style="display: flex; gap: 12px; margin-bottom: 16px; font-size: 16px; color: var(--color-text-primary);">
+            <span style="color: var(--color-primary); font-weight: 700;">✓</span>
+            Maior independência funcional
+          </li>
+          <li style="display: flex; gap: 12px; font-size: 16px; color: var(--color-text-primary);">
+            <span style="color: var(--color-primary); font-weight: 700;">✓</span>
+            Qualidade de vida e bem-estar
+          </li>
+        </ul>
+
+        <a href="servicos.html" class="btn btn-primary" style="font-size: 16px; padding: 14px 32px;">Conheça o programa completo</a>
       </div>
     </div>
   </section>
