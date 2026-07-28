@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça Nathalia de Miranda Souza, especialista em Personal Training para Idosos com 20+ anos de experiência.">
+  <meta name="theme-color" content="#0f0f0f">
+
+  <title>Sobre Nathalia - Personal Training para Idosos</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Inline Styles for SOBRE specific sections -->
+  <style>
+    /* =========================================================================
+       QUEM SOU SECTION
+       ========================================================================= */
+    .quem-sou {
+      padding: var(--spacing-large);
+      background-color: var(--bg-primary);
+    }
+
+    .quem-sou-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-large);
+      align-items: center;
+    }
+
+    .quem-sou-text {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-medium);
+    }
+
+    .quem-sou-text h2 {
+      font-size: var(--font-size-h2-desktop);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--spacing-small);
+    }
+
+    .quem-sou-text p {
+      font-size: var(--font-size-body);
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .quem-sou-highlights {
+      display: flex;
+      gap: var(--spacing-medium);
+      margin-top: var(--spacing-medium);
+      flex-wrap: wrap;
+    }
+
+    .quem-sou-highlight {
+      flex: 1;
+      min-width: 150px;
+      padding: var(--spacing-medium);
+      background-color: var(--bg-secondary);
+      border-left: 4px solid var(--color-primary);
+      border-radius: var(--border-radius-base);
+    }
+
+    .quem-sou-highlight strong {
+      display: block;
+      color: var(--color-primary);
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .quem-sou-highlight span {
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .quem-sou-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .quem-sou-image img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: var(--border-radius-base);
+      object-fit: cover;
+    }
+
+    /* =========================================================================
+       TIMELINE SECTION
+       ========================================================================= */
+    .timeline {
+      padding: var(--spacing-large);
+      background-color: var(--bg-primary);
+    }
+
+    .timeline-title {
+      text-align: center;
+      font-size: var(--font-size-h2-desktop);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--spacing-large);
+    }
+
+    .timeline-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-medium);
+      position: relative;
+    }
+
+    .timeline-card {
+      padding: var(--spacing-medium);
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius-base);
+      position: relative;
+      transition: all var(--transition-base);
+    }
+
+    .timeline-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--color-primary);
+      box-shadow: 0 8px 24px rgba(255, 51, 51, 0.15);
+    }
+
+    .timeline-card-year {
+      display: inline-block;
+      background-color: var(--color-primary);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: var(--spacing-small);
+    }
+
+    .timeline-card-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--spacing-small);
+    }
+
+    .timeline-card-description {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* =========================================================================
+       MISSÃO SECTION
+       ========================================================================= */
+    .missao {
+      padding: 80px var(--spacing-large);
+      background: linear-gradient(135deg, var(--color-primary) 0%, #ff6b6b 100%);
+      color: white;
+      text-align: center;
+      min-height: 40vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .missao-tagline {
+      font-size: var(--font-size-h2-desktop);
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: var(--spacing-large);
+      max-width: 800px;
+    }
+
+    .missao-philosophy {
+      font-size: 18px;
+      line-height: 1.8;
+      max-width: 800px;
+      opacity: 0.95;
+    }
+
+    /* =========================================================================
+       RESPONSIVE ADJUSTMENTS
+       ========================================================================= */
+    @media (max-width: 1023px) {
+      .quem-sou-container {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .quem-sou-text h2 {
+        font-size: var(--font-size-h2-tablet);
+      }
+
+      .missao-tagline {
+        font-size: var(--font-size-h2-tablet);
+      }
+    }
+
+    @media (max-width: 767px) {
+      .quem-sou {
+        padding: var(--spacing-medium);
+      }
+
+      .quem-sou-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-medium);
+      }
+
+      .quem-sou-text h2 {
+        font-size: var(--font-size-h2-mobile);
+      }
+
+      .quem-sou-highlights {
+        flex-direction: column;
+        gap: var(--spacing-small);
+      }
+
+      .quem-sou-highlight {
+        min-width: 100%;
+      }
+
+      .timeline {
+        padding: var(--spacing-medium);
+      }
+
+      .timeline-title {
+        font-size: var(--font-size-h2-mobile);
+        margin-bottom: var(--spacing-medium);
+      }
+
+      .timeline-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-small);
+      }
+
+      .missao {
+        padding: var(--spacing-large) var(--spacing-medium);
+        min-height: auto;
+      }
+
+      .missao-tagline {
+        font-size: var(--font-size-h2-mobile);
+        margin-bottom: var(--spacing-medium);
+      }
+
+      .missao-philosophy {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- =========================================================================
+       NAVBAR
+       ========================================================================= -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <!-- Logo -->
+      <a href="index.html" class="navbar-logo" aria-label="Nath Personal - Home">
+        <img src="assets/logo/Logo-nath-fundoescuro.png" alt="Nath Personal Logo" class="navbar-logo-img">
+      </a>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links" id="navbarMenu">
+        <li><a href="index.html" class="nav-link">HOME</a></li>
+        <li><a href="sobre.html" class="nav-link active">SOBRE</a></li>
+        <li><a href="servicos.html" class="nav-link">SERVIÇOS</a></li>
+        <li><a href="depoimentos.html" class="nav-link">DEPOIMENTOS</a></li>
+        <li><a href="contato.html" class="nav-link">CONTATO</a></li>
+      </ul>
+
+      <!-- CTA Button (WhatsApp) - Hidden on Mobile -->
+      <a href="https://api.whatsapp.com/send?l=pt_pt&phone=5531988991661" class="btn btn-primary btn-small" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">
+        WhatsApp
+      </a>
+
+      <!-- Hamburger Menu Toggle -->
+      <button class="menu-toggle" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       HERO SECTION (Smaller)
+       ========================================================================= -->
+  <section class="hero" id="hero" style="height: 40vh; min-height: 300px;">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="container">
+        <h1 class="hero-title observe-fade-in-up">
+          Conheça Nathalia
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       QUEM SOU SECTION
+       ========================================================================= -->
+  <section class="quem-sou" id="quem-sou">
+    <div class="container">
+      <div class="quem-sou-container">
+        <!-- Text Content -->
+        <div class="quem-sou-text observe-fade-in-up">
+          <h2>Quem Sou</h2>
+          <p>
+            Olá! Sou Nathalia de Miranda Souza, especialista em Personal Training com foco em treinamento para idosos.
+            Formada em Educação Física pela Universidade de Itaúna, dediquei minha carreira a transformar a vida das
+            pessoas através do movimento consciente e personalizado.
+          </p>
+          <p>
+            Possuo especialização em Fisiologia do Exercício e mais de 20 anos de experiência trabalhando com diversos públicos.
+            Ao longo da minha trajetória profissional, compreendi que o envelhecimento é um privilégio, e que podemos
+            construir juntos uma vida com mais saúde, autonomia e qualidade.
+          </p>
+          <p>
+            Meu diferencial está na abordagem humanizada, científica e personalizada. Cada cliente é único, e cada programa
+            de treinamento é especialmente desenhado para suas necessidades, objetivos e limitações.
+          </p>
+
+          <!-- Highlights -->
+          <div class="quem-sou-highlights">
+            <div class="quem-sou-highlight observe-scale-in">
+              <strong>20+</strong>
+              <span>Anos de Experiência</span>
+            </div>
+            <div class="quem-sou-highlight observe-scale-in">
+              <strong>Educação Física</strong>
+              <span>Universidade de Itaúna</span>
+            </div>
+            <div class="quem-sou-highlight observe-scale-in">
+              <strong>Especialização</strong>
+              <span>Fisiologia do Exercício</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image -->
+        <div class="quem-sou-image observe-fade-in">
+          <img src="https://via.placeholder.com/400x500?text=Nathalia" alt="Nathalia de Miranda Souza - Personal Trainer">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       TIMELINE SECTION
+       ========================================================================= -->
+  <section class="timeline" id="timeline">
+    <div class="container">
+      <h2 class="timeline-title observe-fade-in">Minha Trajetória</h2>
+
+      <div class="timeline-container fade-in-up-stagger">
+        <!-- Card 1 -->
+        <div class="timeline-card observe-fade-in-up">
+          <div class="timeline-card-year">2000 - 2005</div>
+          <h3 class="timeline-card-title">Professora</h3>
+          <p class="timeline-card-description">
+            Atuei como professora de Educação Física nas redes estadual e municipal, formando gerações com foco em saúde e movimento.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="timeline-card observe-fade-in-up">
+          <div class="timeline-card-year">2005 - 2010</div>
+          <h3 class="timeline-card-title">Coordenadora</h3>
+          <p class="timeline-card-description">
+            Vice-diretora e coordenadora escolar, desenvolvendo programas de saúde e bem-estar para comunidade escolar.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="timeline-card observe-fade-in-up">
+          <div class="timeline-card-year">2010 - 2015</div>
+          <h3 class="timeline-card-title">Coordenadora de Academias</h3>
+          <p class="timeline-card-description">
+            Coordenadora de academias e personal trainer, especializando-me em diferentes modalidades de treinamento.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="timeline-card observe-fade-in-up">
+          <div class="timeline-card-year">2015 - 2020</div>
+          <h3 class="timeline-card-title">Personal Corporativo</h3>
+          <p class="timeline-card-description">
+            Personal Trainer na FIAT Automóveis, desenvolvendo programas de treinamento e saúde ocupacional.
+          </p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="timeline-card observe-fade-in-up">
+          <div class="timeline-card-year">2020 - Hoje</div>
+          <h3 class="timeline-card-title">Personal Sênior</h3>
+          <p class="timeline-card-description">
+            Especialista dedicada ao atendimento de idosos, promovendo saúde, independência e qualidade de vida.
+          </p>
+        </div>
+
+        <!-- Card 6 - Alternative title for last card -->
+        <div class="timeline-card observe-fade-in-up">
+          <div class="timeline-card-year">Atualmente</div>
+          <h3 class="timeline-card-title">Missão Pessoal</h3>
+          <p class="timeline-card-description">
+            Transformando vidas através do movimento consciente e personalizado, com foco em treinamento para idosos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       MISSÃO E VALORES SECTION
+       ========================================================================= -->
+  <section class="missao" id="missao">
+    <div class="observe-fade-in-up">
+      <h2 class="missao-tagline">
+        Cuidar da sua saúde é a minha missão. Promover qualidade de vida é o meu propósito.
+      </h2>
+      <p class="missao-philosophy">
+        Envelhecer é um privilégio. Envelhecer com saúde, autonomia e qualidade de vida é uma escolha que podemos construir juntos.
+      </p>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       CTA FINAL SECTION
+       ========================================================================= -->
+  <section class="cta-final" id="cta">
+    <div class="container">
+      <h2 class="cta-headline observe-fade-in">Vamos começar sua transformação?</h2>
+      <p class="cta-subheadline observe-fade-in">Entre em contato e agende sua avaliação gratuita</p>
+      <div class="cta-buttons observe-fade-in">
+        <a href="https://api.whatsapp.com/send?l=pt_pt&phone=5531988991661" class="btn btn-primary btn-large" target="_blank" rel="noopener noreferrer">
+          Abrir WhatsApp
+        </a>
+        <a href="contato.html" class="btn btn-secondary btn-large">
+          Enviar mensagem
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <!-- Menu Links -->
+        <div class="footer-section">
+          <h3>Menu</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="depoimentos.html">Depoimentos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+          <h3>Contato</h3>
+          <ul>
+            <li>
+              <a href="tel:+5531988991661">+55 31 98899-1661</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/nathpersonalbh" target="_blank" rel="noopener noreferrer">@nathpersonalbh</a>
+            </li>
+            <li>
+              <a href="https://api.whatsapp.com/send?l=pt_pt&phone=5531988991661" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Hours -->
+        <div class="footer-section">
+          <h3>Horário</h3>
+          <ul>
+            <li>
+              <strong>Seg-Sex:</strong><br>
+              08:00 - 18:00
+            </li>
+            <li>
+              <strong>Sab:</strong><br>
+              08:00 - 12:00
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          Todos os direitos reservados © Nath Personal. Site desenvolvido por <strong>Showmaker Digital</strong>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
