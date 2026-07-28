@@ -33,8 +33,8 @@
      ========================================================================= */
 
   /* Font Families */
-  --font-heading: "Fraunces", Georgia, serif;     /* Premium display face */
-  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;  /* Modern, readable */
+  --font-heading: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;  /* Clean, modern display */
+  --font-body: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;  /* Poppins for consistency */
 
   /* Font Sizes - Desktop */
   --font-size-h1: 48px;

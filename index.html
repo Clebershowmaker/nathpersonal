@@ -18,7 +18,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- =========================================================================
@@ -55,26 +55,23 @@
   </nav>
 
   <!-- =========================================================================
-       HERO SECTION - Left text + Right image (asymmetric layout)
+       HERO SECTION - Full-bleed with image background + left text overlay
        ========================================================================= -->
-  <section class="hero" id="home" style="background: var(--color-bg-primary); min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
-    <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; max-width: 1400px;">
-      <!-- LEFT: Content -->
-      <div class="hero-content observe-fade-in-up" style="z-index: 10;">
-        <h1 class="hero-title" style="font-size: 64px; font-family: var(--font-heading); font-weight: 700; line-height: 1.1; margin-bottom: 24px; letter-spacing: -0.02em; color: white;">
-          Transformando vidas<br>através do movimento
+  <section class="hero" id="home" style="background: linear-gradient(90deg, var(--color-bg-primary) 0%, var(--color-bg-primary) 50%, rgba(15,15,15,0) 100%), url('assets/images/1.png') right center/auto 120% no-repeat; min-height: 100vh; display: flex; align-items: center; justify-content: flex-start; position: relative; overflow: hidden;">
+    <div class="container" style="max-width: 600px; z-index: 10;">
+      <!-- Content -->
+      <div class="hero-content observe-fade-in-up">
+        <h1 class="hero-title" style="font-size: 56px; font-family: 'Poppins', sans-serif; font-weight: 700; line-height: 1.2; margin-bottom: 24px; color: white; text-align: left;">
+          Transformando vidas através do movimento
         </h1>
-        <p class="hero-subtitle" style="font-size: 20px; font-weight: 400; color: var(--color-text-primary); margin-bottom: 48px; line-height: 1.6;">
+        <p class="hero-subtitle" style="font-size: 18px; font-family: 'Poppins', sans-serif; font-weight: 200; color: var(--color-text-primary); margin-bottom: 48px; line-height: 1.8; text-align: left;">
           20+ anos de expertise em Personal Training especializado para idosos. Conheço cada história, respeito cada limite e celebro cada conquista.
         </p>
         <div class="hero-cta" style="display: flex; gap: 16px; flex-wrap: wrap;">
-          <a href="https://api.whatsapp.com/send?l=pt_pt&phone=5531988991661" class="btn btn-primary" style="padding: 16px 36px; font-size: 16px; font-weight: 600;" target="_blank" rel="noopener noreferrer">Iniciar no WhatsApp</a>
-          <a href="sobre.html" class="btn btn-secondary" style="padding: 16px 36px; font-size: 16px; font-weight: 600;">Saiba mais sobre mim</a>
+          <a href="https://api.whatsapp.com/send?l=pt_pt&phone=5531988991661" class="btn btn-primary" style="padding: 14px 32px; font-size: 16px; font-weight: 600;" target="_blank" rel="noopener noreferrer">Iniciar no WhatsApp</a>
+          <a href="sobre.html" class="btn btn-secondary" style="padding: 14px 32px; font-size: 16px; font-weight: 600;">Saiba mais</a>
         </div>
       </div>
-
-      <!-- RIGHT: Image -->
-      <div class="hero-image observe-fade-in-up" style="aspect-ratio: 3/4; background: url('assets/images/1.png') center/contain no-repeat; border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,0.6); position: relative;"></div>
     </div>
   </section>
 
