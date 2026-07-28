@@ -55,22 +55,26 @@
   </nav>
 
   <!-- =========================================================================
-       HERO SECTION - Full-bleed with background imagery
+       HERO SECTION - Left text + Right image (asymmetric layout)
        ========================================================================= -->
-  <section class="hero" id="home" style="background: linear-gradient(135deg, rgba(15,15,15,0.7) 0%, rgba(44,62,80,0.65) 50%, rgba(52,152,219,0.4) 100%), linear-gradient(180deg, #1a3a47 0%, #0f0f0f 100%); background-size: 100% 100%, cover; min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
-    <div class="hero-content" style="text-align: center; z-index: 10;">
-      <div class="container">
-        <h1 class="hero-title observe-fade-in-up" style="font-size: 64px; font-family: var(--font-heading); font-weight: 700; line-height: 1.1; margin-bottom: 16px; letter-spacing: -0.02em;">
+  <section class="hero" id="home" style="background: var(--color-bg-primary); min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+    <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; max-width: 1400px;">
+      <!-- LEFT: Content -->
+      <div class="hero-content observe-fade-in-up" style="z-index: 10;">
+        <h1 class="hero-title" style="font-size: 64px; font-family: var(--font-heading); font-weight: 700; line-height: 1.1; margin-bottom: 24px; letter-spacing: -0.02em; color: white;">
           Transformando vidas<br>através do movimento
         </h1>
-        <p class="hero-subtitle observe-fade-in-up" style="font-size: 22px; font-weight: 400; color: var(--color-text-primary); margin-bottom: 48px; max-width: 600px; margin-left: auto; margin-right: auto;">
-          20+ anos de expertise em Personal Training especializado para idosos
+        <p class="hero-subtitle" style="font-size: 20px; font-weight: 400; color: var(--color-text-primary); margin-bottom: 48px; line-height: 1.6;">
+          20+ anos de expertise em Personal Training especializado para idosos. Conheço cada história, respeito cada limite e celebro cada conquista.
         </p>
-        <div class="hero-cta observe-fade-in-up" style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-          <a href="https://api.whatsapp.com/send?l=pt_pt&phone=5531988991661" class="btn btn-primary btn-large" target="_blank" rel="noopener noreferrer">Iniciar no WhatsApp</a>
-          <a href="sobre.html" class="btn btn-secondary btn-large">Conheça minha história</a>
+        <div class="hero-cta" style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <a href="https://api.whatsapp.com/send?l=pt_pt&phone=5531988991661" class="btn btn-primary" style="padding: 16px 36px; font-size: 16px; font-weight: 600;" target="_blank" rel="noopener noreferrer">Iniciar no WhatsApp</a>
+          <a href="sobre.html" class="btn btn-secondary" style="padding: 16px 36px; font-size: 16px; font-weight: 600;">Saiba mais sobre mim</a>
         </div>
       </div>
+
+      <!-- RIGHT: Image -->
+      <div class="hero-image observe-fade-in-up" style="aspect-ratio: 3/4; background: url('assets/images/CH0A4954.JPG') center/cover no-repeat; border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,0.6); position: relative;"></div>
     </div>
   </section>
 
@@ -80,7 +84,7 @@
   <section class="featured-specialty" id="specialty" style="background: linear-gradient(to right, var(--color-bg-primary) 0%, var(--color-bg-primary) 50%, var(--color-bg-secondary) 50%, var(--color-bg-secondary) 100%); padding: 80px 0; position: relative;">
     <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
       <!-- Image -->
-      <div class="specialty-image" style="aspect-ratio: 1; background: linear-gradient(135deg, #2c5f70 0%, #1a3a4d 50%, #0f2834 100%); border-radius: 12px; box-shadow: 0 16px 48px rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; color: var(--color-text-secondary); font-size: 14px; text-align: center; padding: 32px;">Sua foto de treinamento aqui</div>
+      <div class="specialty-image" style="aspect-ratio: 1; background: url('assets/images/CH0A4963.JPG') center/cover no-repeat; border-radius: 12px; box-shadow: 0 16px 48px rgba(0,0,0,0.5);"></div>
 
       <!-- Content -->
       <div class="specialty-content">
