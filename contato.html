@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entre em contato com Nathalia para agendar sua avaliação gratuita de Personal Training. Disponível por WhatsApp, telefone ou formulário.">
+  <meta name="theme-color" content="#0f0f0f">
+
+  <title>Contato - Nath Personal - Personal Training para Idosos</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Inline Styles for CONTATO specific sections -->
+  <style>
+    /* =========================================================================
+       CONTATO HERO SECTION
+       ========================================================================= */
+    .contato-hero {
+      height: 40vh;
+      background: linear-gradient(135deg, rgba(15, 15, 15, 0.7) 0%, rgba(26, 26, 26, 0.9) 100%),
+                  url('https://via.placeholder.com/1920x800?text=Contato');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--text-primary);
+      padding: var(--spacing-large);
+    }
+
+    .contato-hero h1 {
+      font-size: clamp(28px, 6vw, 48px);
+      font-weight: 700;
+      margin-bottom: var(--spacing-small);
+      color: var(--text-primary);
+    }
+
+    .contato-hero p {
+      font-size: clamp(16px, 3vw, 20px);
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* =========================================================================
+       CONTATO MAIN SECTION (2-Column Layout)
+       ========================================================================= */
+    .contato-main {
+      padding: var(--spacing-large);
+      background-color: var(--bg-primary);
+    }
+
+    .contato-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-large);
+      align-items: start;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* =========================================================================
+       LEFT COLUMN: FORM
+       ========================================================================= */
+    .contato-form-section h2 {
+      font-size: var(--font-size-h2-desktop);
+      color: var(--text-primary);
+      margin-bottom: var(--spacing-medium);
+      font-weight: 700;
+    }
+
+    .form-group {
+      margin-bottom: var(--spacing-medium);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      font-size: var(--font-size-body);
+      color: var(--text-primary);
+      margin-bottom: var(--spacing-xs);
+      font-weight: 500;
+    }
+
+    .form-group label .required {
+      color: var(--color-primary);
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      font-family: var(--font-body);
+      font-size: var(--font-size-body);
+      color: var(--text-primary);
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid var(--text-secondary);
+      padding: var(--spacing-sm) 0;
+      transition: all var(--transition-base);
+      resize: vertical;
+      min-height: 40px;
+    }
+
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-group select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23e0e0e0' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right center;
+      padding-right: var(--spacing-lg);
+      cursor: pointer;
+    }
+
+    .form-group select option {
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-bottom-color: var(--color-primary);
+      box-shadow: 0 2px 0 rgba(255, 51, 51, 0.5);
+    }
+
+    .form-group input.valid,
+    .form-group textarea.valid,
+    .form-group select.valid {
+      border-bottom-color: var(--color-success);
+    }
+
+    .form-group input.invalid,
+    .form-group textarea.invalid,
+    .form-group select.invalid {
+      border-bottom-color: var(--color-primary);
+    }
+
+    .form-error {
+      font-size: 13px;
+      color: var(--color-primary);
+      margin-top: var(--spacing-xs);
+      display: none;
+      animation: slideDown 0.3s ease-out;
+    }
+
+    .form-error.show {
+      display: block;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .form-group-checkbox {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-sm);
+      margin: var(--spacing-medium) 0;
+    }
+
+    .form-group-checkbox input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      accent-color: var(--color-primary);
+      border: 2px solid var(--text-secondary);
+      border-radius: 4px;
+      background-color: transparent;
+      transition: all var(--transition-base);
+      min-height: auto;
+      min-width: auto;
+      border-bottom: none;
+    }
+
+    .form-group-checkbox input[type="checkbox"]:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(255, 51, 51, 0.2);
+    }
+
+    .form-group-checkbox input[type="checkbox"]:checked {
+      background-color: var(--color-primary);
+      border-color: var(--color-primary);
+    }
+
+    .form-group-checkbox label {
+      margin-bottom: 0;
+      font-weight: 400;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .form-submit-btn {
+      width: 100%;
+      padding: var(--spacing-md) var(--spacing-lg);
+      background-color: var(--color-primary);
+      color: #0f0f0f;
+      border: 2px solid var(--color-primary);
+      border-radius: var(--radius-md);
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all var(--transition-base);
+      margin-top: var(--spacing-medium);
+    }
+
+    .form-submit-btn:hover {
+      background-color: var(--color-primary-hover);
+      border-color: var(--color-primary-hover);
+      box-shadow: 0 0 20px rgba(255, 51, 51, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .form-submit-btn:active {
+      transform: translateY(0);
+    }
+
+    .form-submit-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* Success/Error Messages */
+    .form-message {
+      padding: var(--spacing-medium);
+      border-radius: var(--radius-md);
+      margin-bottom: var(--spacing-medium);
+      display: none;
+      animation: slideDown 0.3s ease-out;
+    }
+
+    .form-message.show {
+      display: block;
+    }
+
+    .form-message.success {
+      background-color: rgba(76, 175, 80, 0.15);
+      border-left: 4px solid var(--color-success);
+      color: var(--color-success);
+    }
+
+    .form-message.error {
+      background-color: rgba(255, 51, 51, 0.15);
+      border-left: 4px solid var(--color-primary);
+      color: var(--color-primary);
+    }
+
+    /* =========================================================================
+       RIGHT COLUMN: CONTACT INFO CARDS
+       ========================================================================= */
+    .contato-info-section h2 {
+      font-size: var(--font-size-h2-desktop);
+      color: var(--text-primary);
+      margin-bottom: var(--spacing-medium);
+      font-weight: 700;
+    }
+
+    .contact-card {
+      background-color: var(--bg-secondary);
+      border: 2px solid var(--text-secondary);
+      border-radius: var(--radius-md);
+      padding: var(--spacing-medium);
+      margin-bottom: var(--spacing-medium);
+      transition: all var(--transition-base);
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-medium);
+    }
+
+    .contact-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--color-primary);
+      box-shadow: 0 10px 30px rgba(255, 51, 51, 0.15);
+    }
+
+    .contact-card.highlight {
+      background: linear-gradient(135deg, rgba(255, 51, 51, 0.1) 0%, rgba(255, 51, 51, 0.05) 100%);
+      border: 2px solid var(--color-primary);
+      padding: var(--spacing-large);
+      margin-bottom: var(--spacing-medium);
+    }
+
+    .contact-card.highlight:hover {
+      background: linear-gradient(135deg, rgba(255, 51, 51, 0.15) 0%, rgba(255, 51, 51, 0.1) 100%);
+      border-color: var(--color-primary-hover);
+      box-shadow: 0 15px 40px rgba(255, 51, 51, 0.2);
+    }
+
+    .contact-card-icon {
+      font-size: 32px;
+      min-width: 50px;
+      text-align: center;
+    }
+
+    .contact-card-content {
+      flex: 1;
+    }
+
+    .contact-card-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .contact-card-text {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .contact-card-link {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-primary);
+      text-decoration: none;
+      transition: color var(--transition-base);
+    }
+
+    .contact-card-link:hover {
+      color: var(--color-primary);
+    }
+
+    .contact-card-button {
+      display: inline-block;
+      background-color: var(--color-primary);
+      color: #0f0f0f;
+      padding: var(--spacing-sm) var(--spacing-md);
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      margin-top: var(--spacing-xs);
+      transition: all var(--transition-base);
+    }
+
+    .contact-card-button:hover {
+      background-color: var(--color-primary-hover);
+      transform: translateY(-2px);
+    }
+
+    /* =========================================================================
+       PRÓXIMOS PASSOS SECTION
+       ========================================================================= */
+    .proximos-passos {
+      padding: var(--spacing-large);
+      background-color: var(--bg-secondary);
+      margin-top: var(--spacing-large);
+    }
+
+    .proximos-passos-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .proximos-passos h2 {
+      font-size: var(--font-size-h2-desktop);
+      color: var(--text-primary);
+      text-align: center;
+      margin-bottom: var(--spacing-large);
+      font-weight: 700;
+    }
+
+    .proximos-passos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-large);
+    }
+
+    .proximos-passos-card {
+      background-color: var(--bg-primary);
+      border: 2px solid var(--text-secondary);
+      border-radius: var(--radius-md);
+      padding: var(--spacing-large);
+      text-align: center;
+      transition: all var(--transition-base);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--spacing-medium);
+    }
+
+    .proximos-passos-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--color-primary);
+      box-shadow: 0 15px 40px rgba(255, 51, 51, 0.1);
+    }
+
+    .proximos-passos-emoji {
+      font-size: 48px;
+      line-height: 1;
+    }
+
+    .proximos-passos-card h3 {
+      font-size: 18px;
+      color: var(--color-primary);
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .proximos-passos-card p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* =========================================================================
+       RESPONSIVE DESIGN
+       ========================================================================= */
+    @media (max-width: 1023px) {
+      .contato-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-medium);
+      }
+
+      .proximos-passos-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-card {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .contato-hero {
+        height: 50vh;
+      }
+
+      .contato-hero h1 {
+        font-size: 24px;
+      }
+
+      .contato-hero p {
+        font-size: 14px;
+      }
+
+      .contato-main,
+      .proximos-passos {
+        padding: var(--spacing-medium);
+      }
+
+      .proximos-passos-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-medium);
+      }
+
+      .form-group input,
+      .form-group textarea,
+      .form-group select {
+        min-height: 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- =========================================================================
+       NAVBAR
+       ========================================================================= -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <!-- Logo -->
+      <a href="index.html" class="navbar-logo" aria-label="Nath Personal - Home">
+        <img src="assets/logo/Logo-nath-fundoescuro.png" alt="Nath Personal Logo" class="navbar-logo-img">
+      </a>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links" id="navbarMenu">
+        <li><a href="index.html" class="nav-link">HOME</a></li>
+        <li><a href="sobre.html" class="nav-link">SOBRE</a></li>
+        <li><a href="servicos.html" class="nav-link">SERVIÇOS</a></li>
+        <li><a href="depoimentos.html" class="nav-link">DEPOIMENTOS</a></li>
+        <li><a href="contato.html" class="nav-link active">CONTATO</a></li>
+      </ul>
+
+      <!-- CTA Button (WhatsApp) - Hidden on Mobile -->
+      <a href="https://api.whatsapp.com/send?l=pt_pt&phone=5531988991661" class="btn btn-primary btn-small" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">
+        WhatsApp
+      </a>
+
+      <!-- Hamburger Menu Toggle -->
+      <button class="menu-toggle" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       HERO SECTION
+       ========================================================================= -->
+  <section class="contato-hero">
+    <div>
+      <h1>Entre em Contato</h1>
+      <p>Vamos conversar sobre seus objetivos</p>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       CONTATO MAIN SECTION (2-Column Layout)
+       ========================================================================= -->
+  <section class="contato-main">
+    <div class="contato-container">
+      <!-- LEFT COLUMN: FORM -->
+      <div class="contato-form-section">
+        <h2>Envie-nos uma mensagem</h2>
+
+        <!-- Success/Error Message -->
+        <div class="form-message" id="formMessage"></div>
+
+        <form id="contactForm" novalidate>
+          <!-- Nome -->
+          <div class="form-group">
+            <label for="nome">Nome <span class="required">*</span></label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              required
+              aria-describedby="nomeError"
+              placeholder="Seu nome completo"
+            >
+            <div class="form-error" id="nomeError"></div>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label for="email">Email <span class="required">*</span></label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              aria-describedby="emailError"
+              placeholder="seu.email@exemplo.com"
+            >
+            <div class="form-error" id="emailError"></div>
+          </div>
+
+          <!-- Telefone -->
+          <div class="form-group">
+            <label for="telefone">Telefone <span>(opcional)</span></label>
+            <input
+              type="tel"
+              id="telefone"
+              name="telefone"
+              aria-describedby="telefoneError"
+              placeholder="(31) 98899-1661"
+            >
+            <div class="form-error" id="telefoneError"></div>
+          </div>
+
+          <!-- Serviço de Interesse -->
+          <div class="form-group">
+            <label for="servico">Serviço de Interesse <span class="required">*</span></label>
+            <select
+              id="servico"
+              name="servico"
+              required
+              aria-describedby="servicoError"
+            >
+              <option value="">Selecione um serviço</option>
+              <option value="Personal Sênior">Personal Sênior</option>
+              <option value="Personal Trainer">Personal Trainer</option>
+              <option value="Treinamento Funcional">Treinamento Funcional</option>
+              <option value="Não sei ainda">Não sei ainda</option>
+            </select>
+            <div class="form-error" id="servicoError"></div>
+          </div>
+
+          <!-- Mensagem -->
+          <div class="form-group">
+            <label for="mensagem">Mensagem <span class="required">*</span></label>
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              required
+              aria-describedby="mensagemError"
+              placeholder="Conte-nos mais sobre seus objetivos..."
+            ></textarea>
+            <div class="form-error" id="mensagemError"></div>
+          </div>
+
+          <!-- Checkbox: WhatsApp -->
+          <div class="form-group-checkbox">
+            <input
+              type="checkbox"
+              id="whatsapp"
+              name="whatsapp"
+            >
+            <label for="whatsapp">Desejo receber atualizações por WhatsApp</label>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="form-submit-btn">Enviar Mensagem</button>
+        </form>
+      </div>
+
+      <!-- RIGHT COLUMN: CONTACT INFO -->
+      <div class="contato-info-section">
+        <h2>Informações de Contato</h2>
+
+        <!-- WhatsApp Card (Highlighted) -->
+        <div class="contact-card highlight">
+          <div class="contact-card-icon">💬</div>
+          <div class="contact-card-content">
+            <div class="contact-card-title">WhatsApp</div>
+            <a href="tel:+5531988991661" class="contact-card-link">+55 31 98899-1661</a>
+            <a href="https://api.whatsapp.com/send?l=pt_pt&phone=5531988991661" target="_blank" rel="noopener noreferrer" class="contact-card-button">
+              Abrir WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Phone Card -->
+        <div class="contact-card">
+          <div class="contact-card-icon">📞</div>
+          <div class="contact-card-content">
+            <div class="contact-card-title">Telefone</div>
+            <a href="tel:+5531988991661" class="contact-card-link">+55 31 98899-1661</a>
+          </div>
+        </div>
+
+        <!-- Instagram Card -->
+        <div class="contact-card">
+          <div class="contact-card-icon">📷</div>
+          <div class="contact-card-content">
+            <div class="contact-card-title">Instagram</div>
+            <a href="https://instagram.com/nathpersonalbh" target="_blank" rel="noopener noreferrer" class="contact-card-link">@nathpersonalbh</a>
+          </div>
+        </div>
+
+        <!-- Hours Card -->
+        <div class="contact-card">
+          <div class="contact-card-icon">🕐</div>
+          <div class="contact-card-content">
+            <div class="contact-card-title">Horário de Atendimento</div>
+            <div class="contact-card-text"><strong>Seg-Sex:</strong> 08:00 - 18:00</div>
+            <div class="contact-card-text"><strong>Sab:</strong> 08:00 - 12:00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PRÓXIMOS PASSOS SECTION
+       ========================================================================= -->
+  <section class="proximos-passos">
+    <div class="proximos-passos-container">
+      <h2>Próximos Passos</h2>
+
+      <div class="proximos-passos-grid">
+        <!-- Card 1: Avaliação Inicial -->
+        <div class="proximos-passos-card">
+          <div class="proximos-passos-emoji">📋</div>
+          <h3>Avaliação Inicial Gratuita</h3>
+          <p>Conversa inicial para entender seus objetivos e histórico de saúde.</p>
+        </div>
+
+        <!-- Card 2: Plano Personalizado -->
+        <div class="proximos-passos-card">
+          <div class="proximos-passos-emoji">📝</div>
+          <h3>Plano Personalizado</h3>
+          <p>Desenvolvemos um programa de treinamento exclusivo para você.</p>
+        </div>
+
+        <!-- Card 3: Acompanhamento Dedicado -->
+        <div class="proximos-passos-card">
+          <div class="proximos-passos-emoji">💪</div>
+          <h3>Acompanhamento Dedicado</h3>
+          <p>Treinamento constante com suporte e ajustes contínuos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <!-- Menu Links -->
+        <div class="footer-section">
+          <h3>Menu</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="depoimentos.html">Depoimentos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+          <h3>Contato</h3>
+          <ul>
+            <li>
+              <a href="tel:+5531988991661">+55 31 98899-1661</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/nathpersonalbh" target="_blank" rel="noopener noreferrer">@nathpersonalbh</a>
+            </li>
+            <li>
+              <a href="https://api.whatsapp.com/send?l=pt_pt&phone=5531988991661" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Hours -->
+        <div class="footer-section">
+          <h3>Horário</h3>
+          <ul>
+            <li>
+              <strong>Seg-Sex:</strong><br>
+              08:00 - 18:00
+            </li>
+            <li>
+              <strong>Sab:</strong><br>
+              08:00 - 12:00
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          Todos os direitos reservados © Nath Personal. Site desenvolvido por <strong>Showmaker Digital</strong>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>
