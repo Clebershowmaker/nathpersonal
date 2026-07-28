@@ -1,0 +1,113 @@
+/* =============================================================================
+   CSS CUSTOM PROPERTIES - NATHPERSONAL REDESIGN
+   ============================================================================= */
+
+:root {
+  /* =========================================================================
+     COLOR PALETTE
+     ========================================================================= */
+
+  /* Primary Colors */
+  --color-primary: #FF3333;           /* Vermelho principal (logo) */
+  --color-primary-hover: #ff6b6b;     /* Vermelho hover (claro) */
+
+  /* Background Colors */
+  --color-bg-primary: #0f0f0f;        /* Fundo quase preto */
+  --color-bg-secondary: #1a1a1a;      /* Fundo cinza muito escuro */
+
+  /* Text Colors */
+  --color-text-primary: #e0e0e0;      /* Texto cinza claro */
+  --color-text-secondary: #999999;    /* Texto cinza médio */
+
+  /* Border & Divider Colors */
+  --color-border: #333333;            /* Bordas cinza escuro */
+
+  /* Status Colors */
+  --color-success: #4CAF50;           /* Verde sucesso */
+
+  /* =========================================================================
+     TYPOGRAPHY
+     ========================================================================= */
+
+  /* Font Families */
+  --font-heading: "Poppins", "Inter", sans-serif;
+  --font-body: "Roboto", "Open Sans", sans-serif;
+
+  /* Font Sizes - Desktop */
+  --font-size-h1: 48px;
+  --font-size-h2: 36px;
+  --font-size-h3: 24px;
+  --font-size-body: 16px;
+  --font-size-small: 14px;
+
+  /* Font Sizes - Mobile (overridden in media queries) */
+  --font-size-h1-mobile: 32px;
+  --font-size-h2-mobile: 24px;
+  --font-size-h3-mobile: 18px;
+
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.8;
+
+  /* =========================================================================
+     SPACING
+     ========================================================================= */
+
+  /* Base Unit: 8px */
+  --spacing-xs: 8px;      /* 1 unit */
+  --spacing-sm: 16px;     /* 2 units */
+  --spacing-md: 24px;     /* 3 units */
+  --spacing-lg: 32px;     /* 4 units */
+  --spacing-xl: 48px;     /* 6 units */
+  --spacing-2xl: 64px;    /* 8 units */
+
+  /* =========================================================================
+     BREAKPOINTS (Media Query Values)
+     ========================================================================= */
+
+  --breakpoint-mobile: 320px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+  --breakpoint-wide: 1440px;
+
+  /* =========================================================================
+     BORDER RADIUS
+     ========================================================================= */
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* =========================================================================
+     SHADOWS
+     ========================================================================= */
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+
+  /* =========================================================================
+     TRANSITIONS & ANIMATIONS
+     ========================================================================= */
+
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 500ms ease;
+
+  /* =========================================================================
+     Z-INDEX SCALE
+     ========================================================================= */
+
+  --z-index-base: 0;
+  --z-index-dropdown: 100;
+  --z-index-sticky: 200;
+  --z-index-modal-overlay: 300;
+  --z-index-modal: 301;
+  --z-index-tooltip: 400;
+}
