@@ -1,0 +1,361 @@
+/* =============================================================================
+   ANIMATIONS & KEYFRAMES - NATHPERSONAL REDESIGN
+   ============================================================================= */
+
+@import url('./variables.css');
+
+/* ============================================================================= */
+/* KEYFRAME ANIMATIONS */
+/* ============================================================================= */
+
+/* Fade In - Simple opacity animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Fade In Up - Slide up while fading in */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In Down - Slide down while fading in */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide In Left - Slide from left side */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide In Right - Slide from right side */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Scale In - Grow from center while fading in */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Pulse - Gentle pulsing scale effect */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ============================================================================= */
+/* ANIMATION UTILITY CLASSES */
+/* ============================================================================= */
+
+/* Fade In Animation */
+.fade-in {
+  animation: fadeIn var(--transition-base);
+}
+
+/* Fade In Up Animation */
+.fade-in-up {
+  animation: fadeInUp var(--transition-base);
+}
+
+/* Fade In Down Animation */
+.fade-in-down {
+  animation: fadeInDown var(--transition-base);
+}
+
+/* Slide In Left Animation */
+.slide-in-left {
+  animation: slideInLeft var(--transition-base);
+}
+
+/* Slide In Right Animation */
+.slide-in-right {
+  animation: slideInRight var(--transition-base);
+}
+
+/* Scale In Animation */
+.scale-in {
+  animation: scaleIn var(--transition-base);
+}
+
+/* Pulse Animation (continuous) */
+.pulse {
+  animation: pulse var(--transition-slow) infinite;
+}
+
+/* ============================================================================= */
+/* STAGGER ANIMATIONS - Cascading delays for nth-child elements */
+/* ============================================================================= */
+
+/* Staggered Fade In Up */
+.fade-in-up-stagger > :nth-child(1) {
+  animation-delay: 0ms;
+}
+.fade-in-up-stagger > :nth-child(2) {
+  animation-delay: 100ms;
+}
+.fade-in-up-stagger > :nth-child(3) {
+  animation-delay: 200ms;
+}
+.fade-in-up-stagger > :nth-child(4) {
+  animation-delay: 300ms;
+}
+.fade-in-up-stagger > :nth-child(5) {
+  animation-delay: 400ms;
+}
+.fade-in-up-stagger > :nth-child(6) {
+  animation-delay: 500ms;
+}
+
+/* Apply animation to all children */
+.fade-in-up-stagger > * {
+  animation: fadeInUp var(--transition-base);
+}
+
+/* Staggered Fade In */
+.fade-in-stagger > :nth-child(1) {
+  animation-delay: 0ms;
+}
+.fade-in-stagger > :nth-child(2) {
+  animation-delay: 100ms;
+}
+.fade-in-stagger > :nth-child(3) {
+  animation-delay: 200ms;
+}
+.fade-in-stagger > :nth-child(4) {
+  animation-delay: 300ms;
+}
+.fade-in-stagger > :nth-child(5) {
+  animation-delay: 400ms;
+}
+.fade-in-stagger > :nth-child(6) {
+  animation-delay: 500ms;
+}
+
+/* Apply animation to all children */
+.fade-in-stagger > * {
+  animation: fadeIn var(--transition-base);
+}
+
+/* Staggered Scale In */
+.scale-in-stagger > :nth-child(1) {
+  animation-delay: 0ms;
+}
+.scale-in-stagger > :nth-child(2) {
+  animation-delay: 100ms;
+}
+.scale-in-stagger > :nth-child(3) {
+  animation-delay: 200ms;
+}
+.scale-in-stagger > :nth-child(4) {
+  animation-delay: 300ms;
+}
+.scale-in-stagger > :nth-child(5) {
+  animation-delay: 400ms;
+}
+.scale-in-stagger > :nth-child(6) {
+  animation-delay: 500ms;
+}
+
+/* Apply animation to all children */
+.scale-in-stagger > * {
+  animation: scaleIn var(--transition-base);
+}
+
+/* ============================================================================= */
+/* SCROLL OBSERVER CLASSES - Triggered by IntersectionObserver .visible class */
+/* ============================================================================= */
+
+/* Observe Fade In - Starts hidden, animates on visibility */
+.observe-fade-in {
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.observe-fade-in.visible {
+  animation: fadeIn var(--transition-base) forwards;
+}
+
+/* Observe Fade In Up - Starts hidden and translated, animates on visibility */
+.observe-fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity var(--transition-base), transform var(--transition-base);
+}
+
+.observe-fade-in-up.visible {
+  animation: fadeInUp var(--transition-base) forwards;
+}
+
+/* Observe Scale In - Starts hidden and scaled, animates on visibility */
+.observe-scale-in {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity var(--transition-base), transform var(--transition-base);
+}
+
+.observe-scale-in.visible {
+  animation: scaleIn var(--transition-base) forwards;
+}
+
+/* ============================================================================= */
+/* ACCESSIBILITY - Respect prefers-reduced-motion */
+/* ============================================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  /* Disable all animations for users who prefer reduced motion */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  /* Override specific animation classes */
+  .fade-in,
+  .fade-in-up,
+  .fade-in-down,
+  .slide-in-left,
+  .slide-in-right,
+  .scale-in,
+  .pulse,
+  .fade-in-up-stagger > *,
+  .fade-in-stagger > *,
+  .scale-in-stagger > *,
+  .observe-fade-in.visible,
+  .observe-fade-in-up.visible,
+  .observe-scale-in.visible {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Ensure scroll observer classes are immediately visible */
+  .observe-fade-in,
+  .observe-fade-in-up,
+  .observe-scale-in {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ============================================================================= */
+/* HIGH CONTRAST MODE - Enhance animations for better visibility */
+/* ============================================================================= */
+
+@media (prefers-contrast: more) {
+  /* Increase animation impact in high contrast mode */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
