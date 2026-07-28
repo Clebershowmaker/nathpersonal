@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Depoimentos de clientes satisfeitos com personal training especializado em idosos, personal trainer e treinamento funcional.">
+  <meta name="theme-color" content="#0f0f0f">
+
+  <title>Depoimentos - Nath Personal</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Inline Styles for DEPOIMENTOS specific sections -->
+  <style>
+    /* =========================================================================
+       TESTIMONIALS GRID SECTION
+       ========================================================================= */
+    .testimonials-section {
+      padding: var(--spacing-large);
+      background-color: var(--bg-primary);
+    }
+
+    .testimonials-title {
+      text-align: center;
+      font-size: var(--font-size-h2-desktop);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--spacing-large);
+    }
+
+    .testimonials-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-large);
+      margin-bottom: var(--spacing-large);
+    }
+
+    .testimonial-card {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius-base);
+      padding: var(--spacing-large);
+      text-align: center;
+      transition: all var(--transition-base);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--color-primary);
+      box-shadow: 0 8px 24px rgba(255, 51, 51, 0.15);
+    }
+
+    .testimonial-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      margin-bottom: var(--spacing-medium);
+      flex-shrink: 0;
+    }
+
+    .avatar-gradient-1 {
+      background: linear-gradient(135deg, #FF6B9D 0%, #FFA07A 100%);
+    }
+
+    .avatar-gradient-2 {
+      background: linear-gradient(135deg, #A8EDEA 0%, #FED6E3 100%);
+    }
+
+    .avatar-gradient-3 {
+      background: linear-gradient(135deg, #FFB347 0%, #FFEB99 100%);
+    }
+
+    .avatar-gradient-4 {
+      background: linear-gradient(135deg, #8EC5FC 0%, #E0C3FC 100%);
+    }
+
+    .avatar-gradient-5 {
+      background: linear-gradient(135deg, #F093FB 0%, #F5576C 100%);
+    }
+
+    .avatar-gradient-6 {
+      background: linear-gradient(135deg, #4FACFE 0%, #00F2FE 100%);
+    }
+
+    .testimonial-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .testimonial-age {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: var(--spacing-small);
+    }
+
+    .testimonial-service {
+      display: inline-block;
+      background-color: var(--color-primary);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: var(--spacing-medium);
+    }
+
+    .testimonial-stars {
+      font-size: 16px;
+      margin-bottom: var(--spacing-medium);
+      letter-spacing: 2px;
+    }
+
+    .testimonial-quote {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      font-style: italic;
+      flex: 1;
+    }
+
+    /* =========================================================================
+       STATISTICS SECTION
+       ========================================================================= */
+    .statistics-section {
+      padding: var(--spacing-large);
+      background-color: var(--bg-secondary);
+    }
+
+    .statistics-title {
+      text-align: center;
+      font-size: var(--font-size-h2-desktop);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--spacing-large);
+    }
+
+    .statistics-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-large);
+    }
+
+    .stat-card {
+      background: linear-gradient(135deg, rgba(255, 51, 51, 0.1) 0%, rgba(26, 26, 26, 1) 100%);
+      border: 1px solid var(--color-primary);
+      border-radius: var(--border-radius-base);
+      padding: var(--spacing-large);
+      text-align: center;
+      transition: all var(--transition-base);
+    }
+
+    .stat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 30px rgba(255, 51, 51, 0.2);
+    }
+
+    .stat-number {
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--color-primary);
+      line-height: 1.2;
+      margin-bottom: var(--spacing-small);
+    }
+
+    .stat-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.3;
+    }
+
+    /* =========================================================================
+       CTA FINAL SECTION
+       ========================================================================= */
+    .cta-final {
+      padding: 80px var(--spacing-large);
+      background: linear-gradient(135deg, var(--color-primary) 0%, #ff6b6b 100%);
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .cta-final-headline {
+      font-size: var(--font-size-h2-desktop);
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: var(--spacing-medium);
+      max-width: 600px;
+    }
+
+    .cta-final-buttons {
+      display: flex;
+      gap: var(--spacing-medium);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cta-final-buttons .btn {
+      font-size: 16px;
+      padding: var(--spacing-medium) var(--spacing-lg);
+    }
+
+    /* =========================================================================
+       RESPONSIVE ADJUSTMENTS
+       ========================================================================= */
+    @media (max-width: 1023px) {
+      .testimonials-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-medium);
+      }
+
+      .statistics-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-medium);
+      }
+
+      .testimonials-title,
+      .statistics-title {
+        font-size: var(--font-size-h2-tablet);
+      }
+    }
+
+    @media (max-width: 767px) {
+      .testimonials-section {
+        padding: var(--spacing-medium);
+      }
+
+      .testimonials-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-medium);
+      }
+
+      .testimonials-title {
+        font-size: var(--font-size-h2-mobile);
+        margin-bottom: var(--spacing-medium);
+      }
+
+      .testimonial-card {
+        padding: var(--spacing-medium);
+      }
+
+      .testimonial-name {
+        font-size: 16px;
+      }
+
+      .testimonial-quote {
+        font-size: 13px;
+      }
+
+      .statistics-section {
+        padding: var(--spacing-medium);
+      }
+
+      .statistics-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-medium);
+      }
+
+      .statistics-title {
+        font-size: var(--font-size-h2-mobile);
+        margin-bottom: var(--spacing-medium);
+      }
+
+      .stat-number {
+        font-size: 36px;
+      }
+
+      .stat-title {
+        font-size: 16px;
+      }
+
+      .cta-final {
+        padding: var(--spacing-large) var(--spacing-medium);
+      }
+
+      .cta-final-headline {
+        font-size: var(--font-size-h2-mobile);
+        margin-bottom: var(--spacing-medium);
+      }
+
+      .cta-final-buttons {
+        flex-direction: column;
+      }
+
+      .cta-final-buttons .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- =========================================================================
+       NAVBAR
+       ========================================================================= -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <!-- Logo -->
+      <a href="index.html" class="navbar-logo" aria-label="Nath Personal - Home">
+        <img src="assets/logo/Logo-nath-fundoescuro.png" alt="Nath Personal Logo" class="navbar-logo-img">
+      </a>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links" id="navbarMenu">
+        <li><a href="index.html" class="nav-link">HOME</a></li>
+        <li><a href="sobre.html" class="nav-link">SOBRE</a></li>
+        <li><a href="servicos.html" class="nav-link">SERVIÇOS</a></li>
+        <li><a href="depoimentos.html" class="nav-link active">DEPOIMENTOS</a></li>
+        <li><a href="contato.html" class="nav-link">CONTATO</a></li>
+      </ul>
+
+      <!-- CTA Button (WhatsApp) - Hidden on Mobile -->
+      <a href="https://api.whatsapp.com/send?l=pt_pt&phone=5531988991661" class="btn btn-primary btn-small" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">
+        WhatsApp
+      </a>
+
+      <!-- Hamburger Menu Toggle -->
+      <button class="menu-toggle" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       HERO SECTION
+       ========================================================================= -->
+  <section class="hero" id="depoimentos-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="container">
+        <h1 class="hero-title observe-fade-in-up">
+          O que meus clientes dizem
+        </h1>
+        <p class="hero-subtitle observe-fade-in-up">
+          Histórias de transformação e qualidade de vida
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       TESTIMONIALS GRID SECTION
+       ========================================================================= -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="container">
+      <h2 class="testimonials-title observe-fade-in">Depoimentos dos Clientes</h2>
+
+      <div class="testimonials-container">
+        <!-- Testimonial 1: Maria Silva -->
+        <div class="testimonial-card observe-scale-in">
+          <div class="testimonial-avatar avatar-gradient-1">👩‍🦰</div>
+          <div class="testimonial-name">Maria Silva</div>
+          <div class="testimonial-age">68 anos</div>
+          <div class="testimonial-service">Personal Sênior</div>
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-quote">"Há 6 meses não conseguia subir escadas. Hoje caminho 5km sem cansaço! Nathalia mudou minha vida."</p>
+        </div>
+
+        <!-- Testimonial 2: João Santos -->
+        <div class="testimonial-card observe-scale-in">
+          <div class="testimonial-avatar avatar-gradient-2">👨‍🦳</div>
+          <div class="testimonial-name">João Santos</div>
+          <div class="testimonial-age">72 anos</div>
+          <div class="testimonial-service">Personal Sênior</div>
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-quote">"Perdi o medo de cair. Agora tenho confiança para fazer tudo sozinho. Valeu, Nathalia!"</p>
+        </div>
+
+        <!-- Testimonial 3: Ana Costa -->
+        <div class="testimonial-card observe-scale-in">
+          <div class="testimonial-avatar avatar-gradient-3">👱‍♀️</div>
+          <div class="testimonial-name">Ana Costa</div>
+          <div class="testimonial-age">65 anos</div>
+          <div class="testimonial-service">Personal Sênior</div>
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-quote">"Recuperei minha independência. Sou uma pessoa nova! Fiz amigos e estou muito feliz."</p>
+        </div>
+
+        <!-- Testimonial 4: Carlos Oliveira -->
+        <div class="testimonial-card observe-scale-in">
+          <div class="testimonial-avatar avatar-gradient-4">👨‍💼</div>
+          <div class="testimonial-name">Carlos Oliveira</div>
+          <div class="testimonial-age">45 anos</div>
+          <div class="testimonial-service">Personal Trainer</div>
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-quote">"Perdi 15kg e ganhei muita massa muscular. Personal profissional e dedicada!"</p>
+        </div>
+
+        <!-- Testimonial 5: Beatriz Ferreira -->
+        <div class="testimonial-card observe-scale-in">
+          <div class="testimonial-avatar avatar-gradient-5">👩‍🦱</div>
+          <div class="testimonial-name">Beatriz Ferreira</div>
+          <div class="testimonial-age">35 anos</div>
+          <div class="testimonial-service">Treinamento Funcional</div>
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-quote">"Treinamento super dinâmico! Saí da monotonia da academia. Recomendo!"</p>
+        </div>
+
+        <!-- Testimonial 6: Pedro Alves -->
+        <div class="testimonial-card observe-scale-in">
+          <div class="testimonial-avatar avatar-gradient-6">👴</div>
+          <div class="testimonial-name">Pedro Alves</div>
+          <div class="testimonial-age">70 anos</div>
+          <div class="testimonial-service">Personal Sênior</div>
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-quote">"Minha mãe está muito melhor. Vejo a diferença no dia a dia. Muito obrigado, Nathalia!"</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       STATISTICS SECTION
+       ========================================================================= -->
+  <section class="statistics-section" id="statistics">
+    <div class="container">
+      <h2 class="statistics-title observe-fade-in">Nossos Resultados</h2>
+
+      <div class="statistics-container">
+        <!-- Stat 1: Clientes Transformados -->
+        <div class="stat-card observe-scale-in">
+          <div class="stat-number">500+</div>
+          <div class="stat-title">Clientes Transformados</div>
+        </div>
+
+        <!-- Stat 2: Anos de Experiência -->
+        <div class="stat-card observe-scale-in">
+          <div class="stat-number">20+</div>
+          <div class="stat-title">Anos de Experiência</div>
+        </div>
+
+        <!-- Stat 3: Taxa de Satisfação -->
+        <div class="stat-card observe-scale-in">
+          <div class="stat-number">98%</div>
+          <div class="stat-title">De Satisfação</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       CTA FINAL SECTION
+       ========================================================================= -->
+  <section class="cta-final" id="cta-final">
+    <h2 class="cta-final-headline observe-fade-in-up">Sua história pode ser a próxima</h2>
+    <div class="cta-final-buttons observe-fade-in-up">
+      <a href="https://api.whatsapp.com/send?l=pt_pt&phone=5531988991661" class="btn btn-primary btn-large" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">
+        Abrir WhatsApp
+      </a>
+      <a href="contato.html" class="btn btn-secondary btn-large" aria-label="Ir para contato">
+        Enviar Mensagem
+      </a>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Quick Links -->
+        <div class="footer-section">
+          <h3>Menu</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="depoimentos.html">Depoimentos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+          <h3>Contato</h3>
+          <ul>
+            <li>
+              <a href="tel:+5531988991661">+55 31 98899-1661</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/nathpersonalbh" target="_blank" rel="noopener noreferrer">@nathpersonalbh</a>
+            </li>
+            <li>
+              <a href="https://api.whatsapp.com/send?l=pt_pt&phone=5531988991661" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Hours -->
+        <div class="footer-section">
+          <h3>Horário</h3>
+          <ul>
+            <li>
+              <strong>Seg-Sex:</strong><br>
+              08:00 - 18:00
+            </li>
+            <li>
+              <strong>Sab:</strong><br>
+              08:00 - 12:00
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          Todos os direitos reservados © Nath Personal. Site desenvolvido por <strong>Showmaker Digital</strong>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
