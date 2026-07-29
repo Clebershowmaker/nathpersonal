@@ -1,6 +1,6 @@
 /* =============================================================================
-   RESPONSIVE MEDIA QUERIES - NATHPERSONAL REDESIGN
-   Mobile-First Approach: Base styles for mobile, media queries enhance for larger screens
+   RESPONSIVE DESIGN - MOBILE-FIRST APPROACH
+   Nath Personal - Personal Training para Idosos
    ============================================================================= */
 
 @import url("./variables.css");
@@ -9,310 +9,9 @@
    MOBILE FIRST: BASE STYLES (320px - 767px)
    ============================================================================= */
 
-/* Mobile: Hero Sections */
-@media (max-width: 767px) {
-  .hero,
-  .hero-section {
-    min-height: 50vh !important;
-    padding: var(--spacing-xl) var(--spacing-md) !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center;
-    overflow: hidden !important;
-    clip-path: inset(0) !important;
-  }
-
-  /* Clip/hide background image on mobile */
-  .hero img {
-    clip-path: inset(0 100% 0 0) !important;
-    position: static !important;
-    right: auto !important;
-  }
-
-  /* Hide gradient overlay */
-  .hero > div {
-    display: none !important;
-  }
-
-  .hero-content,
-  .hero-section-content {
-    max-width: 100% !important;
-  }
-
-  .hero-title,
-  .hero h1,
-  .hero-section h1 {
-    font-size: 32px !important;
-    margin-bottom: var(--spacing-md) !important;
-    margin-top: 0 !important;
-    text-align: center !important;
-    line-height: 1.2 !important;
-  }
-
-  .hero h2,
-  .hero-section h2 {
-    font-size: var(--font-size-h2-mobile) !important;
-    margin-bottom: var(--spacing-md) !important;
-    text-align: center !important;
-  }
-
-  .hero-subtitle,
-  .hero p,
-  .hero-section p {
-    font-size: 16px !important;
-    margin-bottom: var(--spacing-md) !important;
-    text-align: center !important;
-    margin-top: 0 !important;
-  }
-
-  /* Hero wrapper */
-  .hero > div[style*="padding"] {
-    padding: 0 var(--spacing-md) !important;
-  }
-
-  /* Hero CTA Buttons */
-  .hero-cta,
-  .hero-buttons {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: var(--spacing-md) !important;
-    width: 100% !important;
-    margin-left: 0 !important;
-    margin-top: var(--spacing-md) !important;
-    justify-content: center !important;
-  }
-
-  .hero-cta .btn,
-  .hero-buttons .btn {
-    width: 100% !important;
-    min-height: 44px !important;
-    font-size: var(--font-size-body) !important;
-    padding: 14px 24px !important;
-  }
-}
-
-/* Mobile: Section Padding & Spacing */
-@media (max-width: 767px) {
-  section {
-    padding: var(--spacing-xl) var(--spacing-md);
-  }
-
-  .section {
-    padding: var(--spacing-xl) var(--spacing-md);
-  }
-
-  .section-header {
-    margin-bottom: var(--spacing-lg);
-  }
-
-  .section-header h2 {
-    font-size: var(--font-size-h2-mobile);
-    margin-bottom: var(--spacing-sm);
-  }
-
-  .section-header p {
-    font-size: var(--font-size-body);
-  }
-
-  /* Featured Specialty Section - 1 column on mobile */
-  .featured-specialty {
-    background: var(--color-bg-primary) !important;
-    padding: var(--spacing-xl) var(--spacing-md) !important;
-  }
-
-  .featured-specialty .container {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: var(--spacing-lg) !important;
-    align-items: center !important;
-  }
-
-  .specialty-image {
-    order: -1;
-    aspect-ratio: 1 !important;
-    max-height: 300px !important;
-  }
-
-  .specialty-content h2 {
-    font-size: var(--font-size-h2-mobile) !important;
-  }
-
-  .specialty-content p {
-    font-size: 16px !important;
-  }
-}
-
-/* Mobile: Grid Layouts (1 Column) */
-@media (max-width: 767px) {
-  /* Generic grid classes for 3-column desktop */
-  .grid-3-desktop,
-  .grid-3,
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-  }
-
-  /* Generic grid classes for 2-column desktop */
-  .grid-2-desktop,
-  .grid-2 {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-  }
-
-  /* Service cards grid */
-  .services-grid,
-  .service-cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-  }
-
-  /* Testimonials grid */
-  .testimonials-grid,
-  .testimonial-cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-  }
-
-  /* Features grid */
-  .features-grid,
-  .feature-cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-  }
-
-  /* Benefits grid */
-  .benefits-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-  }
-
-  /* Cards Grid Layout (already defined but reinforced) */
-  .card-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-  }
-}
-
-/* Mobile: Card Sizing & Padding */
-@media (max-width: 767px) {
-  .card {
-    padding: var(--spacing-md);
-  }
-
-  .card-image {
-    height: 150px;
-    margin: calc(var(--spacing-md) * -1) calc(var(--spacing-md) * -1) var(--spacing-md) calc(var(--spacing-md) * -1);
-  }
-
-  .card-header {
-    margin-bottom: var(--spacing-sm);
-    padding-bottom: var(--spacing-sm);
-  }
-
-  .card-header h2,
-  .card-header h3 {
-    font-size: var(--font-size-h3-mobile);
-  }
-
-  .card-body p {
-    font-size: var(--font-size-body);
-  }
-
-  .card-footer {
-    padding-top: var(--spacing-sm);
-    gap: var(--spacing-xs);
-  }
-}
-
-/* Mobile: Button Sizing (Touch-Friendly - 44px minimum) */
-@media (max-width: 767px) {
-  .btn {
-    min-height: 44px;
-    min-width: 44px;
-    padding: var(--spacing-sm) var(--spacing-md);
-    font-size: var(--font-size-body);
-  }
-
-  .btn-small {
-    min-height: 40px;
-    padding: var(--spacing-xs) var(--spacing-sm);
-  }
-
-  .btn-large {
-    min-height: 48px;
-    padding: var(--spacing-md) var(--spacing-lg);
-    font-size: var(--font-size-body);
-  }
-
-  .btn-full {
-    width: 100%;
-  }
-
-  .btn-icon {
-    min-height: 44px;
-    min-width: 44px;
-    width: 44px;
-    height: 44px;
-    padding: var(--spacing-sm);
-  }
-}
-
-/* Mobile: Form Elements (16px font to prevent iOS zoom) */
-@media (max-width: 767px) {
-  input,
-  textarea,
-  select {
-    font-size: 16px !important; /* Prevent iOS zoom on input focus */
-    padding: var(--spacing-sm);
-    width: 100%;
-  }
-
-  input:focus,
-  textarea:focus,
-  select:focus {
-    font-size: 16px !important;
-  }
-
-  textarea {
-    min-height: 120px;
-    resize: vertical;
-  }
-
-  .form-group {
-    margin-bottom: var(--spacing-lg);
-  }
-
-  .form-group label {
-    display: block;
-    margin-bottom: var(--spacing-xs);
-    font-size: var(--font-size-body);
-    font-weight: var(--font-weight-medium);
-  }
-
-  .form-group input,
-  .form-group textarea,
-  .form-group select {
-    width: 100%;
-  }
-
-  /* Contact form layout */
-  .contact-form-container,
-  .form-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
-  }
-}
-
-/* Mobile: Navigation (Hamburger Menu) */
+/* =========================================================================
+   MOBILE: Navbar
+   ========================================================================= */
 @media (max-width: 767px) {
   .navbar,
   nav {
@@ -337,14 +36,17 @@
   }
 
   /* Hide WhatsApp button in navbar on mobile */
-  .navbar-container > .btn {
+  .navbar-container > .btn,
+  .navbar .btn-small {
     display: none !important;
   }
 
+  /* Show hamburger menu */
   .menu-toggle {
     display: flex !important;
   }
 
+  /* Mobile menu dropdown */
   .nav-links {
     position: absolute;
     top: 100%;
@@ -358,6 +60,7 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height var(--transition-base);
+    z-index: 999;
   }
 
   .nav-links.active {
@@ -368,21 +71,243 @@
     display: block;
     padding: var(--spacing-sm) 0;
     font-size: var(--font-size-body);
+    text-align: left;
   }
 
   .nav-link::after {
     display: none;
   }
+}
 
-  .nav-link:hover {
-    padding-left: var(--spacing-sm);
+/* =========================================================================
+   MOBILE: Hero Section
+   ========================================================================= */
+@media (max-width: 767px) {
+  .section-hero,
+  .hero {
+    min-height: 50vh !important;
+    padding: var(--spacing-xl) var(--spacing-md) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center;
+    overflow: hidden !important;
+  }
+
+  /* Hide hero background image on mobile */
+  .section-hero img,
+  .hero img {
+    display: none !important;
+  }
+
+  /* Hide gradient overlay */
+  .section-hero > div[style*="position: absolute"],
+  .hero > div[style*="position: absolute"],
+  .hero > div[style*="gradient"],
+  .hero > div[style*="background: linear"] {
+    display: none !important;
+  }
+
+  /* Hero content wrapper */
+  .section-content {
+    width: 100% !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+
+  .hero-content {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Hero typography mobile */
+  .section-title,
+  .hero-title,
+  .hero h1 {
+    font-size: 32px !important;
+    margin-top: 0 !important;
+    margin-bottom: var(--spacing-md) !important;
+    text-align: center !important;
+    line-height: 1.2 !important;
+  }
+
+  .section-subtitle,
+  .hero-subtitle,
+  .hero p {
+    font-size: 16px !important;
+    margin-bottom: var(--spacing-md) !important;
+    text-align: center !important;
+    margin-top: 0 !important;
+  }
+
+  /* Hero buttons mobile */
+  .hero-cta,
+  .hero-buttons {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--spacing-md) !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-top: var(--spacing-md) !important;
+    justify-content: center !important;
+  }
+
+  .hero-cta .btn,
+  .hero-buttons .btn {
+    width: 100% !important;
+    min-height: 44px !important;
+    font-size: var(--font-size-body) !important;
+    padding: 12px 24px !important;
   }
 }
 
-/* Mobile: Footer Layout */
+/* =========================================================================
+   MOBILE: Section Padding & Typography
+   ========================================================================= */
+@media (max-width: 767px) {
+  section,
+  .section {
+    padding: var(--spacing-xl) var(--spacing-md) !important;
+  }
+
+  h1 {
+    font-size: 32px !important;
+    line-height: 1.2 !important;
+  }
+
+  h2 {
+    font-size: 24px !important;
+    line-height: 1.2 !important;
+  }
+
+  h3 {
+    font-size: 18px !important;
+  }
+
+  p,
+  body {
+    font-size: 16px !important;
+  }
+
+  .container {
+    padding: 0 var(--spacing-md) !important;
+  }
+}
+
+/* =========================================================================
+   MOBILE: Grid Layouts (1 Column)
+   ========================================================================= */
+@media (max-width: 767px) {
+  .grid-3-desktop,
+  .grid-3,
+  .grid-2-desktop,
+  .grid-2,
+  .grid,
+  .services-grid,
+  .service-cards,
+  .testimonials-grid,
+  .testimonial-cards,
+  .features-grid,
+  .feature-cards,
+  .benefits-grid,
+  .card-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: var(--spacing-md) !important;
+  }
+
+  /* Featured specialty single column */
+  .featured-specialty .container {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: var(--spacing-lg) !important;
+  }
+
+  .specialty-image {
+    order: -1;
+    max-height: 300px !important;
+    aspect-ratio: 1 !important;
+  }
+}
+
+/* =========================================================================
+   MOBILE: Cards & Components
+   ========================================================================= */
+@media (max-width: 767px) {
+  .card {
+    padding: var(--spacing-md) !important;
+  }
+
+  .card-image {
+    height: 150px;
+    margin: calc(var(--spacing-md) * -1) calc(var(--spacing-md) * -1) var(--spacing-md) calc(var(--spacing-md) * -1);
+  }
+
+  /* Buttons mobile */
+  .btn {
+    min-height: 44px !important;
+    min-width: 44px !important;
+    padding: 12px 24px !important;
+    font-size: var(--font-size-body) !important;
+  }
+
+  .btn-small {
+    min-height: 40px !important;
+    padding: var(--spacing-xs) var(--spacing-sm) !important;
+  }
+
+  .btn-large {
+    min-height: 48px !important;
+    padding: var(--spacing-md) var(--spacing-lg) !important;
+  }
+
+  .btn-full {
+    width: 100% !important;
+  }
+}
+
+/* =========================================================================
+   MOBILE: Forms
+   ========================================================================= */
+@media (max-width: 767px) {
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+    padding: var(--spacing-sm) !important;
+    width: 100% !important;
+  }
+
+  textarea {
+    min-height: 120px !important;
+    resize: vertical;
+  }
+
+  .form-group {
+    margin-bottom: var(--spacing-lg) !important;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs) !important;
+    font-size: var(--font-size-body) !important;
+  }
+
+  .contact-form-container,
+  .form-container {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: var(--spacing-lg) !important;
+  }
+}
+
+/* =========================================================================
+   MOBILE: Footer
+   ========================================================================= */
 @media (max-width: 767px) {
   footer {
-    padding: var(--spacing-xl) var(--spacing-md);
+    padding: var(--spacing-xl) var(--spacing-md) !important;
   }
 
   .footer-container {
@@ -390,13 +315,13 @@
   }
 
   .footer-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: var(--spacing-lg) !important;
   }
 
   .footer-section h3 {
-    font-size: var(--font-size-h3-mobile);
+    font-size: 18px !important;
   }
 
   .footer-bottom {
@@ -404,44 +329,116 @@
     text-align: center;
     gap: var(--spacing-sm);
   }
+}
 
-  .footer-links {
-    justify-content: center;
-    flex-direction: column;
-    gap: var(--spacing-sm);
+/* =========================================================================
+   TABLET: STYLES (768px - 1023px)
+   ========================================================================= */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero,
+  .section-hero {
+    min-height: 60vh;
+    padding: var(--spacing-xl) var(--spacing-lg);
   }
 
-  .social-link {
-    width: 40px;
-    height: 40px;
-    font-size: 16px;
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  section,
+  .section {
+    padding: var(--spacing-xl) var(--spacing-lg);
+  }
+
+  /* Grid 2 columns for tablet */
+  .grid-3-desktop,
+  .grid-3,
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .grid-2-desktop,
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .container {
+    padding: 0 var(--spacing-lg);
   }
 }
 
-/* Mobile: Testimonial Card */
-@media (max-width: 767px) {
-  .testimonial-card,
-  .testimonial {
-    padding: var(--spacing-md);
+/* =========================================================================
+   DESKTOP & WIDE SCREENS (1024px+)
+   ========================================================================= */
+@media (min-width: 1024px) {
+  /* Grid 3 columns for desktop */
+  .grid-3-desktop,
+  .grid-3,
+  .services-grid,
+  .service-cards {
+    grid-template-columns: repeat(3, 1fr) !important;
   }
 
-  .testimonial-card h4,
-  .testimonial h4 {
-    font-size: var(--font-size-h3-mobile);
+  .grid-2-desktop,
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 
-  .testimonial-card p,
-  .testimonial p {
-    font-size: var(--font-size-small);
+  section,
+  .section {
+    padding: var(--spacing-2xl) var(--spacing-lg);
   }
 
-  .testimonial-avatar {
-    width: 60px;
-    height: 60px;
+  .hero,
+  .section-hero {
+    min-height: 100vh;
+    padding: var(--spacing-2xl) var(--spacing-lg);
+  }
+
+  /* Hero buttons desktop */
+  .hero-cta,
+  .hero-buttons {
+    flex-direction: row !important;
+    gap: var(--spacing-xl) !important;
+    margin-left: -32px !important;
+    width: auto !important;
+  }
+
+  .container {
+    padding: 0 var(--spacing-lg);
   }
 }
 
-/* Mobile: No Horizontal Scroll */
+/* =============================================================================
+   ACCESSIBILITY
+   ============================================================================= */
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High Contrast */
+@media (prefers-contrast: more) {
+  .btn,
+  .card,
+  input,
+  textarea {
+    border-width: 2px !important;
+  }
+}
+
+/* No Horizontal Scroll */
 @media (max-width: 767px) {
   body,
   html {
@@ -452,456 +449,5 @@
   img {
     max-width: 100%;
     height: auto;
-  }
-
-  .container {
-    width: 100%;
-    padding: 0 var(--spacing-md);
-  }
-
-  table {
-    font-size: var(--font-size-small);
-    overflow-x: auto;
-    display: block;
-  }
-}
-
-/* =============================================================================
-   TABLET: STYLES (768px - 1023px)
-   ============================================================================= */
-
-/* Tablet: Hero Sections */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .hero,
-  .hero-section {
-    min-height: 60vh;
-    padding: var(--spacing-xl) var(--spacing-lg);
-  }
-
-  .hero h1,
-  .hero-section h1 {
-    font-size: 40px;
-    margin-bottom: var(--spacing-lg);
-  }
-
-  .hero h2,
-  .hero-section h2 {
-    font-size: 28px;
-    margin-bottom: var(--spacing-lg);
-  }
-
-  .hero p,
-  .hero-section p {
-    font-size: var(--font-size-body);
-    margin-bottom: var(--spacing-lg);
-  }
-
-  /* Hero CTA Buttons */
-  .hero-cta,
-  .hero-buttons {
-    display: flex;
-    flex-direction: row;
-    gap: var(--spacing-lg);
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .hero-cta .btn,
-  .hero-buttons .btn {
-    min-height: 44px;
-  }
-}
-
-/* Tablet: Section Padding & Spacing */
-@media (min-width: 768px) and (max-width: 1023px) {
-  section {
-    padding: var(--spacing-xl) var(--spacing-lg);
-  }
-
-  .section {
-    padding: var(--spacing-xl) var(--spacing-lg);
-  }
-
-  .section-header {
-    margin-bottom: var(--spacing-lg);
-  }
-
-  .section-header h2 {
-    font-size: 32px;
-    margin-bottom: var(--spacing-md);
-  }
-
-  .section-header p {
-    font-size: var(--font-size-body);
-  }
-}
-
-/* Tablet: Grid Layouts (2 Columns) */
-@media (min-width: 768px) and (max-width: 1023px) {
-  /* Generic grid classes for 3-column desktop */
-  .grid-3-desktop,
-  .grid-3 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-lg);
-  }
-
-  /* Generic grid classes for 2-column desktop */
-  .grid-2-desktop,
-  .grid-2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-lg);
-  }
-
-  /* Service cards grid */
-  .services-grid,
-  .service-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-lg);
-  }
-
-  /* Testimonials grid */
-  .testimonials-grid,
-  .testimonial-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-lg);
-  }
-
-  /* Features grid */
-  .features-grid,
-  .feature-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-lg);
-  }
-
-  /* Benefits grid */
-  .benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-lg);
-  }
-
-  /* Cards Grid Layout */
-  .card-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-lg);
-  }
-}
-
-/* Tablet: Card Sizing & Padding */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .card {
-    padding: var(--spacing-lg);
-  }
-
-  .card-image {
-    height: 180px;
-    margin: calc(var(--spacing-lg) * -1) calc(var(--spacing-lg) * -1) var(--spacing-lg) calc(var(--spacing-lg) * -1);
-  }
-
-  .card-header {
-    margin-bottom: var(--spacing-md);
-    padding-bottom: var(--spacing-md);
-  }
-
-  .card-header h2,
-  .card-header h3 {
-    font-size: 22px;
-  }
-
-  .card-body p {
-    font-size: var(--font-size-body);
-  }
-
-  .card-footer {
-    padding-top: var(--spacing-md);
-    gap: var(--spacing-sm);
-  }
-}
-
-/* Tablet: Button Sizing */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .btn {
-    min-height: 44px;
-    padding: var(--spacing-sm) var(--spacing-md);
-    font-size: var(--font-size-body);
-  }
-
-  .btn-large {
-    min-height: 48px;
-    padding: var(--spacing-md) var(--spacing-lg);
-  }
-
-  .btn-icon {
-    width: 44px;
-    height: 44px;
-  }
-}
-
-/* Tablet: Form Elements */
-@media (min-width: 768px) and (max-width: 1023px) {
-  input,
-  textarea,
-  select {
-    font-size: 16px;
-    padding: var(--spacing-sm);
-  }
-
-  textarea {
-    min-height: 120px;
-  }
-
-  .form-group {
-    margin-bottom: var(--spacing-lg);
-  }
-
-  /* Contact form layout - 2 columns on tablet */
-  .contact-form-container,
-  .form-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-lg);
-    align-items: start;
-  }
-
-  /* Full-width elements in 2-column layout */
-  .contact-form-container > .form-group:nth-child(3),
-  .form-container > .form-group:nth-child(3),
-  .contact-form-container > textarea,
-  .form-container > textarea {
-    grid-column: 1 / -1;
-  }
-}
-
-/* Tablet: Navigation */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .navbar-container {
-    padding: var(--spacing-md) var(--spacing-lg);
-  }
-
-  .navbar-logo {
-    font-size: 22px;
-  }
-
-  .nav-links {
-    gap: var(--spacing-md);
-  }
-
-  .nav-link {
-    font-size: var(--font-size-body);
-  }
-
-  .menu-toggle {
-    display: none;
-  }
-}
-
-/* Tablet: Footer Layout */
-@media (min-width: 768px) and (max-width: 1023px) {
-  footer {
-    padding: var(--spacing-xl) var(--spacing-lg);
-  }
-
-  .footer-content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-lg);
-  }
-
-  .footer-section h3 {
-    font-size: 22px;
-  }
-
-  .footer-bottom {
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
-    gap: var(--spacing-lg);
-  }
-
-  .footer-links {
-    justify-content: flex-end;
-    flex-direction: row;
-  }
-}
-
-/* Tablet: Testimonial Card */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .testimonial-card,
-  .testimonial {
-    padding: var(--spacing-lg);
-  }
-
-  .testimonial-card h4,
-  .testimonial h4 {
-    font-size: 20px;
-  }
-
-  .testimonial-card p,
-  .testimonial p {
-    font-size: var(--font-size-body);
-  }
-
-  .testimonial-avatar {
-    width: 70px;
-    height: 70px;
-  }
-}
-
-/* =============================================================================
-   DESKTOP & WIDE SCREENS (1024px+)
-   ============================================================================= */
-
-/* Desktop: Grid Layouts (3 Columns for desktop, 4 columns for wide) */
-@media (min-width: 1024px) {
-  .grid-3-desktop,
-  .grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-lg);
-  }
-
-  .grid-2-desktop,
-  .grid-2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-lg);
-  }
-
-  .services-grid,
-  .service-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-lg);
-  }
-
-  .testimonials-grid,
-  .testimonial-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-lg);
-  }
-
-  .features-grid,
-  .feature-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-lg);
-  }
-}
-
-/* Desktop: Section Padding */
-@media (min-width: 1024px) {
-  section {
-    padding: var(--spacing-2xl) var(--spacing-lg);
-  }
-
-  .section {
-    padding: var(--spacing-2xl) var(--spacing-lg);
-  }
-}
-
-/* Desktop: Hero Sections */
-@media (min-width: 1024px) {
-  .hero,
-  .hero-section {
-    min-height: 70vh;
-    padding: var(--spacing-2xl) var(--spacing-lg);
-  }
-
-  .hero h1,
-  .hero-section h1 {
-    font-size: var(--font-size-h1);
-  }
-
-  .hero h2,
-  .hero-section h2 {
-    font-size: var(--font-size-h2);
-  }
-
-  .hero-cta,
-  .hero-buttons {
-    flex-direction: row;
-    gap: var(--spacing-xl);
-  }
-}
-
-/* Desktop: Form Layout (2 columns) */
-@media (min-width: 1024px) {
-  .contact-form-container,
-  .form-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: var(--spacing-2xl);
-    align-items: start;
-  }
-}
-
-/* Wide Screens (1440px+) */
-@media (min-width: 1440px) {
-  .container {
-    max-width: 1440px;
-    padding: 0 var(--spacing-lg);
-  }
-
-  section {
-    padding: var(--spacing-2xl) var(--spacing-2xl);
-  }
-
-  .hero,
-  .hero-section {
-    padding: var(--spacing-2xl) var(--spacing-2xl);
-  }
-}
-
-/* =============================================================================
-   ACCESSIBILITY: RESPONSIVE ADJUSTMENTS FOR DIFFERENT PREFERENCES
-   ============================================================================= */
-
-/* Mobile: Reduced Motion */
-@media (max-width: 767px) and (prefers-reduced-motion: reduce) {
-  .hero-cta,
-  .hero-buttons,
-  .services-grid,
-  .testimonials-grid,
-  .card {
-    transition: none !important;
-    animation: none !important;
-  }
-}
-
-/* Mobile: High Contrast */
-@media (max-width: 767px) and (prefers-contrast: more) {
-  .btn,
-  .card,
-  input,
-  textarea,
-  select {
-    border-width: 2px !important;
-  }
-}
-
-/* =============================================================================
-   PRINT STYLES (Optional)
-   ============================================================================= */
-
-@media print {
-  .navbar-container,
-  footer,
-  .menu-toggle {
-    display: none;
-  }
-
-  section {
-    page-break-inside: avoid;
-  }
-
-  .btn {
-    border: 1px solid var(--color-primary);
   }
 }
