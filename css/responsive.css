@@ -85,7 +85,7 @@
 @media (max-width: 767px) {
   .section-hero,
   .hero {
-    min-height: 50vh !important;
+    min-height: auto !important;
     padding: var(--spacing-xl) var(--spacing-md) !important;
     display: flex !important;
     align-items: center !important;
