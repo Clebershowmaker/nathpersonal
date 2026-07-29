@@ -22,14 +22,20 @@
     overflow: hidden !important;
   }
 
-  /* Hide background image on mobile */
-  .hero img {
+  /* Hide background image on mobile - multiple selectors for coverage */
+  .hero img,
+  .hero-image,
+  .hero > img {
     display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
   }
 
   /* Hide gradient overlay on mobile */
   .hero > div[style*="gradient"],
-  .hero > div[style*="background: linear"] {
+  .hero > div[style*="background: linear"],
+  .hero > div[style*="position: absolute"] {
     display: none !important;
   }
 
@@ -313,15 +319,23 @@
 /* Mobile: Navigation (Hamburger Menu) */
 @media (max-width: 767px) {
   .navbar-container {
-    padding: var(--spacing-sm);
+    padding: var(--spacing-sm) !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
   }
 
   .navbar-logo {
     font-size: var(--font-size-h3-mobile);
   }
 
+  /* Hide WhatsApp button in navbar on mobile */
+  .navbar-container > .btn {
+    display: none !important;
+  }
+
   .menu-toggle {
-    display: flex;
+    display: flex !important;
   }
 
   .nav-links {
