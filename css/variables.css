@@ -128,4 +128,6 @@
   --border-color: var(--color-border);
   --border-radius-base: var(--radius-md);
   --radius-base: var(--radius-md);
+  --font-size-h2-desktop: var(--font-size-h2);
+  --font-weight-medium: var(--font-weight-medium);
 }
