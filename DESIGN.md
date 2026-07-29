@@ -29,19 +29,12 @@ Documentary + Modern Premium. Every section demonstrates real human movement and
 
 ## Typography
 
-**Display Face: Fraunces**
-- Serif, warm, distinctive personality
-- Used for: all headings (h1-h6)
-- Weight: 700 for impact
-- Tracking: -0.02em (tight, premium)
-- No italic (italic serif is cliché template default)
-
-**Body Face: Inter**
-- Sans-serif, modern, highly readable
-- Used for: all body text, UI labels, controls
-- Weight: 400 regular, 500 medium, 600 bold
-- Measure: 65-75ch on desktop (optimal reading width)
+**Primary Face: Poppins**
+- Sans-serif, clean, modern, premium
+- Used for: ALL headings (h1-h6) and body text
+- Weights in use: 200 (light), 400 (regular), 600 (medium), 700 (bold)
 - Tracking: normal (0)
+- Spacing: optimized for readability with line-height 1.0-1.6
 
 **Size Scale:**
 | Element | Desktop | Mobile | Weight | Purpose |
@@ -51,7 +44,14 @@ Documentary + Modern Premium. Every section demonstrates real human movement and
 | h3 | 24px | 18px | 700 | Card/subsection |
 | h4 | 20px | 18px | 600 | Small heading |
 | Body | 16px | 16px | 400 | Main text (16px prevents mobile zoom) |
+| Body Light | 16-18px | 16px | 200 | Subtitle, secondary content |
 | Small | 14px | 13px | 400 | Captions, labels |
+
+**CSS Classes for Semantic Markup:**
+- `.section-title` — h1 hero size + styling
+- `.section-subtitle` — body-light size with proper spacing
+- `.section-hero` — hero section container
+- `.section-content` — content wrapper with proper padding
 
 ## Spacing & Rhythm
 
