@@ -22,19 +22,24 @@
     overflow: hidden !important;
   }
 
-  /* Hide background image on mobile - multiple selectors for coverage */
-  .hero img,
-  .hero-image,
-  .hero > img {
-    display: none !important;
-    visibility: hidden !important;
-    height: 0 !important;
-    width: 0 !important;
+  /* Create overlay to hide all absolute positioned elements */
+  .hero::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: var(--color-bg-primary) !important;
+    z-index: 9 !important;
   }
 
-  /* Hide gradient overlay on mobile */
-  .hero > div[style*="gradient"],
-  .hero > div[style*="background: linear"],
+  /* Hide background image on mobile */
+  .hero img {
+    display: none !important;
+  }
+
+  /* Hide all absolutely positioned divs (gradient overlay) */
   .hero > div[style*="position: absolute"] {
     display: none !important;
   }
