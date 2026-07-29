@@ -114,4 +114,18 @@
   --z-index-modal-overlay: 300;
   --z-index-modal: 301;
   --z-index-tooltip: 400;
+
+  /* =========================================================================
+     ALIASES FOR BACKWARD COMPATIBILITY (Legacy variable names)
+     ========================================================================= */
+  --spacing-small: var(--spacing-sm);
+  --spacing-medium: var(--spacing-md);
+  --spacing-large: var(--spacing-xl);
+  --text-primary: var(--color-text-primary);
+  --text-secondary: var(--color-text-secondary);
+  --bg-primary: var(--color-bg-primary);
+  --bg-secondary: var(--color-bg-secondary);
+  --border-color: var(--color-border);
+  --border-radius-base: var(--radius-md);
+  --radius-base: var(--radius-md);
 }

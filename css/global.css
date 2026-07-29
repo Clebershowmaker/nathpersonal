@@ -395,6 +395,56 @@ section {
 }
 
 /* =========================================================================
+   SECTION BASE CLASSES
+   ========================================================================= */
+
+.section,
+.section-base {
+  width: 100%;
+  padding: var(--spacing-2xl) var(--spacing-lg);
+}
+
+.section-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+  background: var(--color-bg-primary);
+}
+
+.section-content {
+  width: 100%;
+  max-width: 100%;
+  z-index: 10;
+  position: relative;
+  padding: 0 var(--spacing-lg) 0 var(--spacing-sm);
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.0;
+  color: white;
+  text-align: left;
+  margin-bottom: var(--spacing-md);
+  margin-top: -65px;
+}
+
+.section-subtitle {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 200;
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  text-align: left;
+  margin-bottom: var(--spacing-md);
+  margin-top: -8px;
+}
+
+/* =========================================================================
    CONTAINER & MAX-WIDTH UTILITIES
    ========================================================================= */
 
