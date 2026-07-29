@@ -87,9 +87,7 @@
   .hero {
     min-height: auto !important;
     padding: var(--spacing-xl) var(--spacing-md) !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+    display: block !important;
     text-align: center;
     overflow: hidden !important;
   }
