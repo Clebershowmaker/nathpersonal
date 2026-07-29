@@ -130,6 +130,13 @@
     line-height: 1.2 !important;
   }
 
+  /* Remove negative margins that cut off title in mobile */
+  h1,
+  h2,
+  h3 {
+    margin-top: 0 !important;
+  }
+
   .section-subtitle,
   .hero-subtitle,
   .hero p {
