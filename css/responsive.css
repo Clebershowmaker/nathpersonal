@@ -20,27 +20,18 @@
     justify-content: center !important;
     text-align: center;
     overflow: hidden !important;
+    clip-path: inset(0) !important;
   }
 
-  /* Create overlay to hide all absolute positioned elements */
-  .hero::before {
-    content: '' !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    background: var(--color-bg-primary) !important;
-    z-index: 9 !important;
-  }
-
-  /* Hide background image on mobile */
+  /* Clip/hide background image on mobile */
   .hero img {
-    display: none !important;
+    clip-path: inset(0 100% 0 0) !important;
+    position: static !important;
+    right: auto !important;
   }
 
-  /* Hide all absolutely positioned divs (gradient overlay) */
-  .hero > div[style*="position: absolute"] {
+  /* Hide gradient overlay */
+  .hero > div {
     display: none !important;
   }
 
@@ -323,15 +314,26 @@
 
 /* Mobile: Navigation (Hamburger Menu) */
 @media (max-width: 767px) {
+  .navbar,
+  nav {
+    padding: 8px 16px !important;
+  }
+
   .navbar-container {
-    padding: var(--spacing-sm) !important;
+    padding: 8px 16px !important;
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
+    gap: 16px !important;
   }
 
   .navbar-logo {
-    font-size: var(--font-size-h3-mobile);
+    font-size: 20px !important;
+  }
+
+  .navbar-logo-img {
+    height: 40px !important;
+    width: auto !important;
   }
 
   /* Hide WhatsApp button in navbar on mobile */
