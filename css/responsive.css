@@ -120,7 +120,14 @@
   }
 
   /* Hero typography mobile */
-  .section-title,
+  .section-title {
+    font-size: 32px !important;
+    margin-top: 0 !important;
+    margin-bottom: var(--spacing-md) !important;
+    text-align: center !important;
+    line-height: 1.2 !important;
+  }
+
   .hero-title,
   .hero h1 {
     font-size: 32px !important;
@@ -130,10 +137,13 @@
     line-height: 1.2 !important;
   }
 
-  /* Remove negative margins that cut off title in mobile */
+  /* Remove ALL negative margins on headings in mobile */
   h1,
   h2,
-  h3 {
+  h3,
+  h4,
+  h5,
+  h6 {
     margin-top: 0 !important;
   }
 
